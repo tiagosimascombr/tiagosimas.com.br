@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const fetch = require("../node_modules/node-fetch");
 
 const SheetParser = function SheetParser(spreadsheetId, sheetNumber = 1) {
     const vocabulary = {
@@ -39,7 +39,7 @@ class SpreadsheetParser {
         this.spreadsheetId = spreadsheetId;
     }
 
-    async getByNumber(sheetNumber) {
+    getByNumber(sheetNumber) {
         return SheetParser(this.spreadsheetId, sheetNumber);
     }
 
