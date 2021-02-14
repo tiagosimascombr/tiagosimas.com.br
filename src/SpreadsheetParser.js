@@ -1,4 +1,4 @@
-const fetch = require("../node_modules/node-fetch");
+const fetch = require("node-fetch");
 
 const SheetParser = function SheetParser(spreadsheetId, sheetNumber = 1) {
     const vocabulary = {
