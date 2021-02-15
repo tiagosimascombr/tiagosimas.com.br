@@ -12,6 +12,10 @@
         {%- for video in spreadsheet.videos -%}
         {{ video }}
         {%- endfor -%}
+        <h2>Sobre</h2>
+        {%- for info in spreadsheet.sobre -%}
+        {{ info }}
+        {%- endfor -%}
         <h2>Fotos</h2>
         {%- for foto in spreadsheet.fotos -%}
         {{ foto }}

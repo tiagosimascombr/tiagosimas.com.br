@@ -5,7 +5,8 @@ const SheetParser = function SheetParser(spreadsheetId, sheetNumber = 1) {
         "cell": "gs$cell",
         "text": "$t",
         "col": "col",
-        "row": "row"
+        "row": "row",
+        "spreadsheetUrl": `https://spreadsheets.google.com/feeds/cells/${spreadsheetId}/${sheetNumber}/public/full?alt=json`
     };
 
     const _parseKey = (total, cell) => {
@@ -22,12 +23,11 @@ const SheetParser = function SheetParser(spreadsheetId, sheetNumber = 1) {
     };
 
     const _parser = sheet => sheet.feed.entry.map(cell => cell[vocabulary.cell]).reduce((total, cell) => {
-        const isFirstRow = cell[vocabulary.row] === "1";
-        isFirstRow ? _parseKey(total, cell) : _parseLine(total, cell);
+        cell[vocabulary.row] === "1" ? _parseKey(total, cell) : _parseLine(total, cell);
         return total;
     }, {});
 
-    return fetch(`https://spreadsheets.google.com/feeds/cells/${spreadsheetId}/${sheetNumber}/public/full?alt=json`)
+    return fetch(vocabulary.spreadsheetUrl)
         .then(response => response.json())
         .then(data => _parser(data));
 

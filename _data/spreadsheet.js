@@ -6,7 +6,8 @@ module.exports = async function() {
     const sheetAliases = {
         "contatos": "1",
         "videos": "2",
-        "fotos": "3"
+        "fotos": "3",
+        "sobre": "4"
     };
 
     async function _getSheetByAlias(alias) {
