@@ -1,0 +1,68 @@
+<ul class="social-links" data-hide-after-separator="{{hide_after_separator}}">
+    {% assign hasSeparator = false %}
+    {%- for contato in spreadsheet.contatos -%}
+        {% assign icone = contato.icone | split: ", " %}
+        {% assign type = icone[0] %}
+        {% assign name = icone[1] %}
+        {% assign prefix = icone[2] %}
+
+        {%- if contato.extra and hasSeparator == false -%}
+            {% assign hasSeparator = true %}
+            <li class="social-links__separator"></li>
+        {%- endif -%}
+
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="{{contato.href}}">
+                {% fontAwesomeIcon type name prefix %}
+            </a>
+        </li>
+
+    {%- endfor -%}
+    <li class="social-links__item--text">
+        CONTATO
+    </li>
+</ul>
+
+<style>
+    .social-links {
+        margin-left: auto;
+        margin-top: auto;
+        list-style: none;
+        display: flex;
+        margin-right: auto;
+        padding: 0;
+    }
+    @media(min-width: 768px) {
+        .social-links {
+            width: 100%;
+            margin-left: initial;
+        }
+    }
+    .social-links__separator {
+        margin-left: auto;
+    }
+    .social-links__item,
+    .social-links__item--text {
+        margin-right: 8px;
+    }
+    .social-links__item--text {
+        display: none;
+        color: #fff;
+        font-size: 32px;
+        font-family: "Bebas Neue", sans-serif;
+    }
+    @media(min-width: 768px) {
+        .social-links__item--text {
+            display: initial;
+        }
+    }
+    .social-links__anchor {
+        color: #fff;
+    }
+
+    [data-hide-after-separator=true] .social-links__separator ~ .social-links__item,
+    [data-hide-after-separator=true] .social-links__separator ~ .social-links__item--text {
+        display: none;
+    }
+
+</style>
