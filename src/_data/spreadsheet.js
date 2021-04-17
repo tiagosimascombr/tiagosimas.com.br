@@ -1,7 +1,7 @@
-const SpreadsheetParser = require("../../SpreadsheetParser");
+const Spreadparser = require("spreadparser");
+const fetch = require("node-fetch");
 
 module.exports = async function() {
-    const SimasSpreadsheet = new SpreadsheetParser("1MSs0eP85tmLZKeBiNrfMvinjkw-MU1AzI_jnDW8Mh8w");
 
     const sheetAliases = {
         "contatos": "1",
@@ -12,8 +12,10 @@ module.exports = async function() {
     };
 
     async function _getSheetByAlias(alias) {
-        return await SimasSpreadsheet.getByNumber(sheetAliases[alias])
-            .then(sheet => Object.values(sheet.lines));
+        return await fetch(Spreadparser.getSpreadsheetUrl("1MSs0eP85tmLZKeBiNrfMvinjkw-MU1AzI_jnDW8Mh8w", sheetAliases[alias]))
+            .then(response => response.json())
+            .then(data => Spreadparser.parse(data, {titleCase: 'camelCase'}))
+            .then(sheet => sheet.data);
     }
 
     return await Object.keys(sheetAliases).reduce(async (_total, alias) => {
