@@ -2,6 +2,7 @@
 const fontAwesomeSolid  = require("@fortawesome/free-solid-svg-icons");
 const fontAwesomeRegular  = require("@fortawesome/free-regular-svg-icons");
 const fontAwesomeBrands  = require("@fortawesome/free-brands-svg-icons");
+const markdownIt = require("markdown-it");
 
 module.exports = function(config) {
 
@@ -44,6 +45,18 @@ module.exports = function(config) {
   filesToPassthrough.forEach(fileOrDir => {
     config.addPassthroughCopy(fileOrDir);
   });
+  const mdRender = new markdownIt();
+
+  config.addFilter("renderUsingMarkdown", function(rawString) {
+    return mdRender.render(rawString);
+  });
+
+  return {
+    dir: {
+      input: "src",
+      output: "www"
+    }
+  };
 
   return {
     dir: {

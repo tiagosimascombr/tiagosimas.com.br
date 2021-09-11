@@ -54,9 +54,8 @@
             <div class="card">
                 <img class="card__image" src="{{spreadsheet.sobre[0].foto}}" loading="lazy" width="824" height="816">
                 <div class="card__description">
-                    <h1 class="card__description__title">Tiago Simas</h1>
                     {%- for sobre in spreadsheet.sobre -%}
-                    <p>{{sobre.texto}}</p>
+                        <p>{{sobre.texto | renderUsingMarkdown}}</p>
                     {%- endfor -%}
                 </div>
             </div>
@@ -207,6 +206,14 @@
             padding: 32px;
             font-size: 1.4em;
             text-shadow: 0 0 5px #000;
+        }
+
+        .card__description p:empty {
+            display: none;
+        }
+
+        .card__description p {
+            margin-top: 0;
         }
 
         .card__description__title {
