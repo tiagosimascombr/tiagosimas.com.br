@@ -49,11 +49,12 @@
         </div>
     </section>
     <section class="page-section">
-        <h1 class="page-section__title">Tiago Simas</h1>
+        <h2 class="page-section__title">Sobre</h2>
         <div class="page-section__content">
             <div class="card">
                 <img class="card__image" src="{{spreadsheet.sobre[0].foto}}" loading="lazy" width="824" height="816">
                 <div class="card__description">
+                    <h1 class="card__description__title">Tiago Simas</h1>
                     {%- for sobre in spreadsheet.sobre -%}
                     <p>{{sobre.texto}}</p>
                     {%- endfor -%}
@@ -188,11 +189,13 @@
         .card__image {
             filter: grayscale(1);
             width: 100%;
+            height: auto;
         }
 
         @media(min-width: 768px) {
             .card__image {
-                width: 50%;
+                width: 30%;
+                min-width: 300px;
                 height: 50%;
                 margin-bottom: auto;
             }
@@ -203,7 +206,13 @@
             color: #fff;
             padding: 32px;
             font-size: 1.4em;
+            text-shadow: 0 0 5px #000;
         }
+
+        .card__description__title {
+            margin: 0;
+        }
+
         @media(min-width: 768px) {
             .card__description {
                 font-size: 1.2em;
