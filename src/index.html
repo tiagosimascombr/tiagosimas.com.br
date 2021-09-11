@@ -44,12 +44,12 @@
 
     <section class="page-section--large">
         <div class="page-section__content--column">
-            <h1 class="logo-title">[ TIAGO SIMAS ]</h1>
+            <img src="/images/logo-tiago-simas.png" width="353" height="252" class="logo-image">
             {% include partials/components/social.html hide_after_separator:true %}
         </div>
     </section>
     <section class="page-section">
-        <h2 class="page-section__title">Sobre</h2>
+        <h2 class="page-section__title">Tiago Simas</h2>
         <div class="page-section__content">
             <div class="card">
                 <img class="card__image" src="{{spreadsheet.sobre[0].foto}}" loading="lazy" width="824" height="816">
@@ -124,7 +124,7 @@
             min-height: calc(100vh - 60px);
         }
 
-        .logo-title {
+        .logo-image {
             margin-bottom: auto;
             font-size: 3em;
             color: #fff;
@@ -135,7 +135,7 @@
         }
 
         @media(min-width: 768px) {
-            .logo-title {
+            .logo-image {
                 margin-left: initial;
                 font-size: 5em;
             }
