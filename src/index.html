@@ -93,18 +93,6 @@
             </ul>
         </div>
     </section>
-    <section class="page-section">
-        <h2 class="page-section__title">Fotos</h2>
-        <div class="page-section__content--column">
-            <ul class="photos-list">
-                {%- for foto in spreadsheet.fotos -%}
-                <li class="photos-list__item" id="<%- index %>" onclick="SIMAS.openImage('{{foto.full}}')">
-                    <img class="photos-list__thumb" src="{{foto.thumbnail}}" loading="lazy">
-                </li>
-                {%- endfor -%}
-            </ul>
-        </div>
-    </section>
     <section class="page-section--small">
         <div class="page-section__content--column">
             {% include partials/components/social.html hide_after_separator:false %}
