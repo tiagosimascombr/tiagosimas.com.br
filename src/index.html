@@ -7,22 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-<body class="page-body">
-    <video
-        class="page-video-background"
-        role="presentation"
-        crossorigin="anonymous"
-        playsinline
-        preload="auto"
-        muted
-        loop
-        autoplay
-        tabindex="-1"
-        width="1440"
-        height="810"
-        style="width: 1440px; height: 810px;">
-    <source src="/videos/fundo-site.mp4" type="video/mp4">
-</video>
+<body class="page-body">    
 <main class="page-main">
     <script type="application/javascript">
         window.SIMAS = window.SIMAS || {};
@@ -44,7 +29,7 @@
 
     <section class="page-section--large">
         <div class="page-section__content--column">
-            <img src="/images/logo-tiago-simas.png" width="353" height="252" class="logo-image">
+            <img src="{{ spreadsheet.configs[0].logoUrl }}" width="{{ spreadsheet.configs[0].logoWidth }}" height="{{ spreadsheet.configs[0].logoHeight }}" class="logo-image">
             {% include partials/components/social.html hide_after_separator:true %}
         </div>
     </section>
@@ -459,6 +444,9 @@
         padding: 0;
         z-index: 1;
         font-family: sans-serif;
+        background-size: cover;
+        background-attachment: fixed;   
+        background-image: url({{ spreadsheet.configs[0].backgroundImageUrl }});
     }
 
     .page-video-background {
