@@ -2,10 +2,122 @@
 <html lang="{{ spreadsheet.configs[0].language }}">
 <head>
     <meta charset="UTF-8">
-    <title>{{ spreadsheet.configs[0].title }} </title>
+    <title>Portfólio audiovisual Tiago Simas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>	
 <body>
+    <style>
+.playlist__videos {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    overflow-x: auto;
+    position: relative;
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    gap: 20px;
+}
+
+main.page-main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #16161d;
+}
+
+h2.playlist__title {
+    margin: 40px 0 20px 0;
+    color: #fff;
+}
+
+section.playlist {
+    margin-bottom: 60px;
+}
+
+input[type="search"] {
+    border: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: 10px;
+    color: #fff;
+} 
+
+.video-box {
+    cursor: pointer;
+}
+    </style>
+    <script type="text/javascript">
+        window.SIMAS = {};
+        window.SIMAS.onSearchVideo = function (target) {
+            const search = target.value.trim();
+
+            if(target.value.length >= 3) {
+                Array.from(document.querySelectorAll("[data-search]"))
+                    .forEach(item => item.style.display = "none");
+                Array.from(document.querySelectorAll(`[data-search*="${search.toLowerCase()}"]`))
+                    .forEach(item => item.style.display = "initial");                    
+            } else {
+                Array.from(document.querySelectorAll("[data-search]"))
+                    .forEach(item => item.style.display = "initial");
+            }
+        }
+
+        window.SIMAS.chooseVideo = function (target) {
+            const chosenVideoUrl = `https://www.youtube.com/embed/${target.dataset.videoId}`;
+            document.querySelector("[data-selector='video']").setAttribute("src", chosenVideoUrl);
+        }
+
+    </script>
+    <main class="page-main">
+        <input type="search" onkeyup="SIMAS.onSearchVideo(this)">
+        <div class="video">
+            <iframe 
+                width="960" 
+                height="540" 
+                data-selector="video"
+                src="https://www.youtube.com/embed/zoePzYBk8RY" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+        {%- for playlist in spreadsheet.playlists -%}
+            <section class="playlist">
+                <h2 class="playlist__title">{{ playlist.title }}</h2>
+                <div class="playlist__videos">
+            {%- for video in spreadsheet.playlists_videos -%}
+                {% if video.playlist == playlist.id %}
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="{{video.id}}"
+                        class="video-box"
+                        data-search="{{ video.title | toLowerCase }}"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="{{ video.thumbnailurl }}"
+                            title="{{ video.title }}"
+                        >
+                    </div>
+                {% endif %}            
+            {%- endfor -%}    
+                </div>
+            </section>
+        {%- endfor -%}
+    </main>
 </body>

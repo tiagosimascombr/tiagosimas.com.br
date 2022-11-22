@@ -9,7 +9,8 @@ module.exports = async function() {
         "fotos": "3",
         "sobre": "4",
         "configs": "5",
-        "playlists": "7"
+        "playlists": "7",
+        "playlists_videos": "9"
     };
 
     async function _getSheetByAlias(alias) {

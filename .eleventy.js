@@ -51,6 +51,10 @@ module.exports = function(config) {
     return mdRender.render(rawString);
   });
 
+  config.addFilter("toLowerCase", function(rawString) {
+    return rawString.toLowerCase();
+  });  
+
   return {
     dir: {
       input: "src",
@@ -58,10 +62,4 @@ module.exports = function(config) {
     }
   };
 
-  return {
-    dir: {
-      input: "src"
-    },
-    passthroughFileCopy: true
-  };
 };
