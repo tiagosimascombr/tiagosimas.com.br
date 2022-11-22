@@ -1,0 +1,3491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio audiovisual Tiago Simas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>	
+<body>
+    <style>
+.playlist__videos {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    overflow-x: auto;
+    position: relative;
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    gap: 20px;
+}
+
+main.page-main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #16161d;
+}
+
+h2.playlist__title {
+    margin: 40px 0 20px 0;
+    color: #fff;
+}
+
+section.playlist {
+    margin-bottom: 60px;
+}
+
+input[type="search"] {
+    border: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: 10px;
+    color: #fff;
+} 
+
+.video-box {
+    cursor: pointer;
+}
+    </style>
+    <script type="text/javascript">
+        window.SIMAS = {};
+        window.SIMAS.onSearchVideo = function (target) {
+            const search = target.value.trim();
+
+            if(target.value.length >= 3) {
+                Array.from(document.querySelectorAll("[data-search]"))
+                    .forEach(item => item.style.display = "none");
+                Array.from(document.querySelectorAll(`[data-search*="${search.toLowerCase()}"]`))
+                    .forEach(item => item.style.display = "initial");                    
+            } else {
+                Array.from(document.querySelectorAll("[data-search]"))
+                    .forEach(item => item.style.display = "initial");
+            }
+        }
+
+        window.SIMAS.chooseVideo = function (target) {
+            const chosenVideoUrl = `https://www.youtube.com/embed/${target.dataset.videoId}`;
+            document.querySelector("[data-selector='video']").setAttribute("src", chosenVideoUrl);
+        }
+
+    </script>
+    <main class="page-main">
+        <input type="search" onkeyup="SIMAS.onSearchVideo(this)">
+        <div class="video">
+            <iframe 
+                width="960" 
+                height="540" 
+                data-selector="video"
+                src="https://www.youtube.com/embed/zoePzYBk8RY" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div><section class="playlist">
+                <h2 class="playlist__title">Projetos - Esporte</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="p8gboJOHMxE"
+                        class="video-box"
+                        data-search="btg run"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/p8gboJOHMxE/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARhlIE8oVDAP&rs=AOn4CLDAOnaq2tPa3YsMY_FVNrnKe8UNaQ"
+                            title="BTG RUN"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="zzPosCzRByw"
+                        class="video-box"
+                        data-search="day run"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/zzPosCzRByw/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARhKIEkoWTAP&rs=AOn4CLDScOpRLMT1VWJYbZVaCVh438vBpg"
+                            title="DAY RUN"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="az28MzAPeHk"
+                        class="video-box"
+                        data-search="junta e vai - joinville/sc"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/az28MzAPeHk/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARgTIE8ofzAP&rs=AOn4CLCELvjILl-DHiVgeIwnjvZNiQuDzA"
+                            title="JUNTA E VAI - Joinville/SC"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Q9Rj-RKebBI"
+                        class="video-box"
+                        data-search="junta e vai - lacre amigo"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Q9Rj-RKebBI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7qNG7c6kSn2Zehi9dmOzFF6R1DA"
+                            title="JUNTA E VAI - Lacre Amigo"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="GT1Tz5ECrdQ"
+                        class="video-box"
+                        data-search="move run"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/GT1Tz5ECrdQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAOIhNwrLXXt5bZzjUWYrENDAAIgg"
+                            title="MOVE RUN"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="4o9dDILZpvs"
+                        class="video-box"
+                        data-search="the music night run 2018"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/4o9dDILZpvs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6ID-MZdfodJJocKs49wss3Xucug"
+                            title="The Music Night Run 2018"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="eLjIADOmYfw"
+                        class="video-box"
+                        data-search="the music night run 2019"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/eLjIADOmYfw/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARhlIEMoQjAP&rs=AOn4CLDfqtEHrWq6KfHV9iSqBL-toykMhw"
+                            title="The Music Night Run 2019"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="o5Rx0bueLyE"
+                        class="video-box"
+                        data-search="day bike e run 2022"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/o5Rx0bueLyE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZ3btUBGc8qKoSVZ8-mRFZJPwHnw"
+                            title="DAY BIKE E RUN 2022"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Vídeos/Animações - Redes Sociais</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="RAAw9tzxRGA"
+                        class="video-box"
+                        data-search="tik tok - viva decora"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/RAAw9tzxRGA/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBtgiAAoAPigIMCAAQARh_IEUoNDAP&rs=AOn4CLCn3ouGUl236M3Sx0nlhE2AXrCr8w"
+                            title="Tik Tok - Viva Decora"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="tk0HjqdoTTw"
+                        class="video-box"
+                        data-search="um guarulhense movido pela arte - redes sociais"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/tk0HjqdoTTw/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBtgiAAoAPigIMCAAQARhlIEsoTTAP&rs=AOn4CLDYa3_9s0eCJeRieRZ8k2sc1i8qqw"
+                            title="UM GUARULHENSE MOVIDO PELA ARTE - Redes Sociais"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="fbOhznD2xdM"
+                        class="video-box"
+                        data-search="showlivre - redes sociais"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/fbOhznD2xdM/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBtgiAAoAPigIMCAAQARh_IFcoKTAP&rs=AOn4CLCfTPVkfgsiwdCO0V5tG9O5El8OFQ"
+                            title="Showlivre - Redes Sociais"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="0jvU81X5oyI"
+                        class="video-box"
+                        data-search="vai no tempo 4 - redes sociais"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/0jvU81X5oyI/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBjAKAAuADigIMCAAQARhyIGIoFjAP&rs=AOn4CLDCdkUrDcEoJh9NTeJ13gUzCxx_IQ"
+                            title="Vai no Tempo 4 - Redes Sociais"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="U2RhErFnvt4"
+                        class="video-box"
+                        data-search="deixa pra lá - redes sociais"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/U2RhErFnvt4/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBjAKAAuADigIMCAAQARh_IBMoFzAP&rs=AOn4CLAYphorU60tecGCR3s3xqLiCYRJqA"
+                            title="Deixa pra lá - Redes Sociais"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="V8ElzSCVMDM"
+                        class="video-box"
+                        data-search="mv bill - redes sociais"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/V8ElzSCVMDM/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBjAKAAuADigIMCAAQARhyIFUoOTAP&rs=AOn4CLBNgp7v8rlzJVS_hJBBCSFavv1Bvw"
+                            title="MV Bill - Redes Sociais"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="aTBAt7gAa6U"
+                        class="video-box"
+                        data-search="vai no tempo - redes socias"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/aTBAt7gAa6U/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBjAKAAuADigIMCAAQARhyIGYoFDAP&rs=AOn4CLCOkVbIkr5LqTce43XuNKKgdWP0RA"
+                            title="Vai no Tempo - Redes Socias"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="TyZDv3-4psU"
+                        class="video-box"
+                        data-search="vai no tempo 2 - redes sociais"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/TyZDv3-4psU/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBjAKAAuADigIMCAAQARhyIF8oHDAP&rs=AOn4CLCAik_edSaluf5ekUiHIljQofC9qg"
+                            title="Vai no Tempo 2 - Redes Sociais"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="xej3n1QFwwc"
+                        class="video-box"
+                        data-search="vai no tempo 3 - redes sociais"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/xej3n1QFwwc/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBjAKAAuADigIMCAAQARhyIEIoMjAP&rs=AOn4CLDBSNEDF-wBHwXnY9JuSa-PIyZQWA"
+                            title="Vai no Tempo 3 - Redes Sociais"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="X8HU_u1sWW0"
+                        class="video-box"
+                        data-search="the music night run - redes sociais"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/X8HU_u1sWW0/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBjAKAAuADigIMCAAQARhyIDwoQjAP&rs=AOn4CLBOPSA3uYMKEEN1YkFOmA77lFP6cA"
+                            title="The Music Night Run - Redes Sociais"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="regjvpGOjTo"
+                        class="video-box"
+                        data-search="estrada viva - redes sociais"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/regjvpGOjTo/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB3gOAAuADigIMCAAQARgPIGUoQTAP&rs=AOn4CLDo1QCydFA8UUSp53w9mKi3HDhuMw"
+                            title="ESTRADA VIVA - Redes Sociais"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="OhpTut9DZFM"
+                        class="video-box"
+                        data-search="turismo - destinos da bia - vertical"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/OhpTut9DZFM/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBlAOAAtAFigIMCAAQARhyIFMoOjAP&rs=AOn4CLBlMx8Q_cQqeP3d5eTfLrcCtfr41Q"
+                            title="Turismo - Destinos da Bia - Vertical"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="mQlCPbiw7Q4"
+                        class="video-box"
+                        data-search="day bike e run - shorts"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/mQlCPbiw7Q4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCA-h0UT-WUkx7oG2rpoJXtXAUw7w"
+                            title="DAY BIKE E RUN - SHORTS"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Projetos - Feira Preta</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="7d5tUaW2UCo"
+                        class="video-box"
+                        data-search="feira preta - abertura 2021"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/7d5tUaW2UCo/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARh7IBMofzAP&rs=AOn4CLAc8D9BfQN-PfAD8DM_Yp29eVICjA"
+                            title="Feira Preta - Abertura 2021"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="cBQKl7U0it8"
+                        class="video-box"
+                        data-search="criativamente - trace tv (teaser)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/cBQKl7U0it8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCymHZEfpwaz_rveCPYG8FHprc1JA"
+                            title="CRIATIVAMENTE - TRACE TV (Teaser)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="zmPVEEaBte0"
+                        class="video-box"
+                        data-search="preta degusta - abertura"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/zmPVEEaBte0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBeCLkJefQ3i4t9Fj1xY5RcsNtUeA"
+                            title="Preta Degusta - Abertura"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="kTypB8rB08Q"
+                        class="video-box"
+                        data-search="festival feira preta - abertura 2020"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/kTypB8rB08Q/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARsj04WfZ__w5p_fyz82_QERURAQ"
+                            title="Festival Feira Preta - Abertura 2020"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="1zia9fVwTqU"
+                        class="video-box"
+                        data-search="preta na moda - abertura"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/1zia9fVwTqU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBbI1Uq1LAyluo41AJUoDyqHFCZ6Q"
+                            title="Preta na Moda - Abertura"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="g-ZC4OyO6NA"
+                        class="video-box"
+                        data-search="feira preta ocupa - abertura"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/g-ZC4OyO6NA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDyuCfJU3Ce_7AfrDC8ak2LriaHeg"
+                            title="Feira Preta Ocupa - Abertura"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="QjxI2lCPoAw"
+                        class="video-box"
+                        data-search="preta jazz - abertura"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/QjxI2lCPoAw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAjMImv-YJSN0DhBrtB-125NarI_Q"
+                            title="Preta Jazz - Abertura"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="2NLq3Q6qoZY"
+                        class="video-box"
+                        data-search="afrolab colombia - abertura"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/2NLq3Q6qoZY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvn_82-WKyvy1bS-IHM2CF4PxQbQ"
+                            title="Afrolab Colombia - Abertura"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="lt5YJPK7uGA"
+                        class="video-box"
+                        data-search="14º feira preta 2015 - são paulo/sp"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/lt5YJPK7uGA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAuRwO1322LA0bmeE_nMYGt17jCWQ"
+                            title="14º Feira Preta 2015 - São Paulo/SP"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="8czQTJ3Uzfo"
+                        class="video-box"
+                        data-search="15º feira preta 2016 - são paulo/sp"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/8czQTJ3Uzfo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBsq3m75cCMI6VuCNf9HY_Wxv7qhA"
+                            title="15º Feira Preta 2016 - São Paulo/SP"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="wnq2tt0uyq8"
+                        class="video-box"
+                        data-search="afrolab para elas | queremos ir para todo o brasil"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/wnq2tt0uyq8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAqH0MYZfbn-wnnvLrLw9DFX5rskQ"
+                            title="AFROLAB PARA ELAS | Queremos ir para todo o Brasil"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="-K1p9LoKfLA"
+                        class="video-box"
+                        data-search="a voz e a vez | feira preta e google"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/-K1p9LoKfLA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBomBmXngnei-BgseGwmlc5Dl84Gg"
+                            title="A VOZ E A VEZ | Feira Preta e Google"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="PGm1L37sf2Y"
+                        class="video-box"
+                        data-search="13º feira preta - afro fest 2014 em são paulo/sp"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/PGm1L37sf2Y/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACK2r5ar-NsOZE1roaydShlLMGwQ"
+                            title="13º Feira Preta - Afro Fest 2014 em São Paulo/SP"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="VB6nCdQR6i4"
+                        class="video-box"
+                        data-search="adriana barbosa fala sobre a feira preta"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/VB6nCdQR6i4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDggCl4aTXaQwDvPPO1Ja27reYPnA"
+                            title="ADRIANA BARBOSA FALA SOBRE A FEIRA PRETA"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ZokBgQRc0mA"
+                        class="video-box"
+                        data-search="conheça a trajetória de adriana barbosa"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ZokBgQRc0mA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCBE2lGhwm55rWpdC-tuJy94ANZow"
+                            title="CONHEÇA A TRAJETÓRIA DE ADRIANA BARBOSA"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="mv_ajFH-WUc"
+                        class="video-box"
+                        data-search="afrolab colombia"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/mv_ajFH-WUc/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARhyIFkoETAP&rs=AOn4CLBTvbvbaZ-WFXv0zgnll1jQVDQPmA"
+                            title="Afrolab Colombia"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="zgMjfrqUJts"
+                        class="video-box"
+                        data-search="comercial globo fpp"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/zgMjfrqUJts/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhRIFooZTAP&rs=AOn4CLAcj_2oyY8WvB45bmob3OkD56VMYw"
+                            title="COMERCIAL GLOBO FPP"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Vídeos Institucionais</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="0aOgFosPtbU"
+                        class="video-box"
+                        data-search="proativa | gestão consciente de saúde corporativa"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/0aOgFosPtbU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFRnSD1PjLcdHWBz8aouuq6or7oA"
+                            title="PROATIVA | Gestão consciente de saúde corporativa"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="wuJcN_yyY84"
+                        class="video-box"
+                        data-search="como conseguir mais clientes com o youtube - parcerias"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/wuJcN_yyY84/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvT8bdePVPThQxHb8X0Z9P5rPMsg"
+                            title="COMO CONSEGUIR MAIS CLIENTES COM O YOUTUBE - PARCERIAS"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="JERnMUbeCc0"
+                        class="video-box"
+                        data-search="telemedicina - institucional"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/JERnMUbeCc0/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARhlIFIoUjAP&rs=AOn4CLCwcXNqJ5JNeFI-4Vm2jy2pnXa4lw"
+                            title="TELEMEDICINA - Institucional"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="sLO3rRFLOkw"
+                        class="video-box"
+                        data-search="como a parceria com a viva decora traz novos resultados?"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/sLO3rRFLOkw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3RRqDtJyZu9gDNLYgknMITOeKKQ"
+                            title="COMO A PARCERIA COM A VIVA DECORA TRAZ NOVOS RESULTADOS?"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="kzKAilEUS2U"
+                        class="video-box"
+                        data-search="o que mudou depois da parceria com a viva decora"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/kzKAilEUS2U/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8g1QTS-neN0vAZvnH4wrXK00xew"
+                            title="O QUE MUDOU DEPOIS DA PARCERIA COM A VIVA DECORA"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="j9wwBhnnXa0"
+                        class="video-box"
+                        data-search="trajetória com a viva decora - parceria de sucesso"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/j9wwBhnnXa0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoMo8r6MiQhTE9vMysXLVpsv7kWQ"
+                            title="TRAJETÓRIA COM A VIVA DECORA - PARCERIA DE SUCESSO"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ON8geQAUpa0"
+                        class="video-box"
+                        data-search="gastronomia cultural - zona norte - são paulo"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ON8geQAUpa0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBo3bz7zNAetSrRLYdvnuKz_p8IEw"
+                            title="Gastronomia Cultural - Zona Norte - São Paulo"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="SQj4XZ6zJ_s"
+                        class="video-box"
+                        data-search="archaday são paulo"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/SQj4XZ6zJ_s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUrwHnoHcl-4rnrEeIu-PMHp1VbA"
+                            title="Archaday São Paulo"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="CI_0Zt4Ux9E"
+                        class="video-box"
+                        data-search="sala cinza - dicas e inspiração para decorar seu lar"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/CI_0Zt4Ux9E/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLApji6Ee4oET4_WXOMsqL6ixd5ePA"
+                            title="SALA CINZA - DICAS E INSPIRAÇÃO PARA DECORAR SEU LAR"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="qYuxY_eiIfk"
+                        class="video-box"
+                        data-search="ideias de cores de tintas para quartos - 20 dicas"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/qYuxY_eiIfk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmbPaaoveO_XCd2lYBuDvlqNlyXg"
+                            title="IDEIAS DE CORES DE TINTAS PARA QUARTOS - 20 DICAS"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="yPUx7shHHNs"
+                        class="video-box"
+                        data-search="tendências de decoração para casa 2019 - 18 dicas"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/yPUx7shHHNs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD006fmC-VA5V6L1NI1PSAUvJQ6iw"
+                            title="TENDÊNCIAS DE DECORAÇÃO PARA CASA 2019 - 18 DICAS"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="0Ekqu6IK3nY"
+                        class="video-box"
+                        data-search="balcão de cozinha - ideias incríveis para te inspirar!"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/0Ekqu6IK3nY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD43WTBemc1xyhauNf8C2JDL1UrXw"
+                            title="BALCÃO DE COZINHA - IDEIAS INCRÍVEIS PARA TE INSPIRAR!"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="aiv6WfFpiA0"
+                        class="video-box"
+                        data-search="14 dicas incríveis para quarto de casal - confira!"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/aiv6WfFpiA0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCMaGA-RDAsxiwUKUSOVgB8oOtT0Q"
+                            title="14 DICAS INCRÍVEIS PARA QUARTO DE CASAL - Confira!"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="iM-Kfuf0_H0"
+                        class="video-box"
+                        data-search="modelos de banheiros - dicas e ideias profissionais"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/iM-Kfuf0_H0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCcXhQpZ8K8rsTo2m9NusQLpV52fw"
+                            title="MODELOS DE BANHEIROS - DICAS E IDEIAS PROFISSIONAIS"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="WCw0iGcTLlQ"
+                        class="video-box"
+                        data-search="dicas de profissionais para o seu quarto - confira!"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/WCw0iGcTLlQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDCwqxCu4jH8REvEXMZYqMaQ7MU3A"
+                            title="DICAS DE PROFISSIONAIS PARA O SEU QUARTO - Confira!"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="JKkBVama_nY"
+                        class="video-box"
+                        data-search="casacor são paulo 2022: criando um ambiente de sucesso"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/JKkBVama_nY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDt0NTKB9W98hiP_9P6-OtybyA4Cg"
+                            title="CASACOR SÃO PAULO 2022: CRIANDO UM AMBIENTE DE SUCESSO"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="UEEBlNG9m0o"
+                        class="video-box"
+                        data-search="casacor brasília 2022: tendências e ambientes"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/UEEBlNG9m0o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBBgZ8Xg9Y9-fQquDc3UBmx6-aURg"
+                            title="CASACOR BRASÍLIA 2022: TENDÊNCIAS E AMBIENTES"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="nrmGl35bEUk"
+                        class="video-box"
+                        data-search="expoflora holambra 2022: festival de flores são paulo"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/nrmGl35bEUk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASUDA09Ew7ee8prOtG1QdOTDp6VQ"
+                            title="EXPOFLORA HOLAMBRA 2022: FESTIVAL DE FLORES SÃO PAULO"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Videografismo</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="JUATPdl23sg"
+                        class="video-box"
+                        data-search="turismo - destinos da bia - horizontal"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/JUATPdl23sg/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIFUoNzAP&rs=AOn4CLA_LrnKZa-fjEQNA9jxBYpIfrtsyQ"
+                            title="Turismo - Destinos da Bia - Horizontal"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="fSL7S_9KUEg"
+                        class="video-box"
+                        data-search="aberturta - um guarulhense movido pela arte"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/fSL7S_9KUEg/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARhlIE8oQDAP&rs=AOn4CLC0BF640vgeafPBnW6Rj_an5KRMGg"
+                            title="ABERTURTA - UM GUARULHENSE MOVIDO PELA ARTE"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="rL4FMuZ1mng"
+                        class="video-box"
+                        data-search="nerds do brasil - vinheta"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/rL4FMuZ1mng/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARhlIE8oPzAP&rs=AOn4CLANMMCYIMq5yuDtPOUgvDeTFX1cug"
+                            title="NERDS DO BRASIL - VINHETA"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="5fj2eA_SQ3U"
+                        class="video-box"
+                        data-search="mac - conversando a gente se aprende - 4k"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/5fj2eA_SQ3U/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCl4Bymjswg_lX4kn1zeOLTN4Ue7Q"
+                            title="MAC - CONVERSANDO A GENTE SE APRENDE - 4K"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="AjzBVrTaML8"
+                        class="video-box"
+                        data-search="designer de interiores - história"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/AjzBVrTaML8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCrK1k1grW11e1hHfxvR_DuJhKubg"
+                            title="Designer de Interiores - História"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="r_DB4XIYgHM"
+                        class="video-box"
+                        data-search="viva decora - ideias de decoração, diy e inspiração"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/r_DB4XIYgHM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC1no8tvdbAMXFCLg_0j3CkOqxIGw"
+                            title="Viva Decora - Ideias de Decoração, DIY e Inspiração"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="w5XakGuBb2A"
+                        class="video-box"
+                        data-search="zanardo paisagismo - dicas, ideias e inspirações"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/w5XakGuBb2A/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBuJJV8htMCe-ubLm5_EJGsB2GK1w"
+                            title="Zanardo Paisagismo - Dicas, Ideias e Inspirações"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="T0xOaZdOgLM"
+                        class="video-box"
+                        data-search="portal mamulengo - vinheta"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/T0xOaZdOgLM/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARhyIFkoOTAP&rs=AOn4CLBRSl-kScO8U3q-KKT0x9liJU7r2A"
+                            title="PORTAL MAMULENGO - Vinheta"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="plKa49HI7Y4"
+                        class="video-box"
+                        data-search="tiago simas - vai no tempo ( lyrics)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/plKa49HI7Y4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoc07DjEWaqMMtT2J8lZ5d1b6iSg"
+                            title="Tiago Simas - Vai no Tempo ( Lyrics)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="vnvgCGXAgt8"
+                        class="video-box"
+                        data-search="mv bill - estilo vagabundo 4 (mulher com raiva mix) prod insanne tracks"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/vnvgCGXAgt8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDkR942BL_Bd8q6URtL3C522P3VWg"
+                            title="MV BILL - Estilo Vagabundo 4 (mulher com raiva mix) Prod Insanne Tracks"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="94f8yKtoXFs"
+                        class="video-box"
+                        data-search="mv bill - amor bandido (motel mix) prod. insanne tracks"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/94f8yKtoXFs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAWM57JCjWrL0mqKOoGrkT92tXZmg"
+                            title="MV BILL - Amor bandido (Motel Mix) Prod. Insanne Tracks"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Bur2RwyVu2g"
+                        class="video-box"
+                        data-search="mv bill- estilo vagabundo 2 (dr mix )prod.insanne tracks"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Bur2RwyVu2g/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCF1lrGNAnNBHpZZULd9K39Je_PuA"
+                            title="MV BILL- Estilo Vagabundo 2 (DR mix )Prod.Insanne Tracks"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="omUnQ_BDDv0"
+                        class="video-box"
+                        data-search="mv bill - estilo vagabundo 3 (prod dj caique)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/omUnQ_BDDv0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB68tHIUpN4g3YO-ex5zeZFfgxkZw"
+                            title="MV BILL - Estilo Vagabundo 3 (Prod Dj Caique)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="sfktvgZjoQs"
+                        class="video-box"
+                        data-search="mv bill - estilo vagabundo 1 (prod. capony)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/sfktvgZjoQs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASK4hJ94J-CRFJ1EgxR9n8HuHIfw"
+                            title="MV BILL - Estilo Vagabundo 1 (prod. Capony)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="T2C_VT0pV9Q"
+                        class="video-box"
+                        data-search="mv bill - estilo vagabundo 4 (acapella mix)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/T2C_VT0pV9Q/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBvyyXP9ZfB90QH8DOAHvojsFb0xg"
+                            title="MV BILL - Estilo Vagabundo 4 (acapella mix)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="cIeDO8aNwjQ"
+                        class="video-box"
+                        data-search="mv bill - estilo vagabundo 4 - part. kmila cdd (prod. dj caique)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/cIeDO8aNwjQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHwDKdBLS4HJRiZoqboesqytAXAg"
+                            title="MV BILL - ESTILO VAGABUNDO 4 - Part. Kmila Cdd (Prod. DJ Caique)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="GdwAKUf7AFY"
+                        class="video-box"
+                        data-search="mv bill "estilo vagabundo" - ep completo"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/GdwAKUf7AFY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB82BmJUau53a6VM9aDkDaGXX3lyw"
+                            title="MV BILL "Estilo Vagabundo" - EP Completo"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="9sfBOlEaQzs"
+                        class="video-box"
+                        data-search="mv bill -mulheres... "maria da penha mix" (pro. dj caique)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/9sfBOlEaQzs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBiy8Z6SuZqbTGEbpkwAUowsiXrsA"
+                            title="MV BILL -Mulheres... "maria da penha mix" (pro. dj caique)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Zu76gxj3Nq4"
+                        class="video-box"
+                        data-search="mv bill - brado retumbante- king kong mix (prod. dj luciano)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Zu76gxj3Nq4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoTHXO1t8PMe4QynOUmesfRLYhXg"
+                            title="MV BILL - Brado Retumbante- King kong mix (prod. dj luciano)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="gkizi_j3TJU"
+                        class="video-box"
+                        data-search="mv bill - so deus pode me julgar -contemporaneo mix- (prod. dj luciano sp)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/gkizi_j3TJU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDn78-QWwkPDzo1ZfteQmiJzsjStw"
+                            title="MV BILL - So Deus pode me julgar -contemporaneo mix- (prod. dj luciano sp)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="UmXE8SnDG3g"
+                        class="video-box"
+                        data-search="mv bill- egresso (prod. dj caique)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/UmXE8SnDG3g/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLArV964eRN5tV9txjKy1ROv4urW7w"
+                            title="MV BILL- Egresso (prod. dj caique)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="TJj5TYzssdI"
+                        class="video-box"
+                        data-search="mv bill - guerra de facção (prod. dj luciano sp)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/TJj5TYzssdI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBAe9hyJwqg8Dp6RUBmP8qE9Kmfuw"
+                            title="MV BILL - Guerra de Facção (prod. dj luciano sp)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="1vUd0tUn54U"
+                        class="video-box"
+                        data-search="mv bill-meninos do tráfico -part. kmilacdd (prod. dj luciano sp)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/1vUd0tUn54U/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAf2Kho1q-yiJf62BdaCVlalv_NIA"
+                            title="MV BILL-Meninos Do Tráfico -Part. KmilaCDD (prod. dj luciano sp)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="a01FiA3Lfw4"
+                        class="video-box"
+                        data-search="mv bill- cêélouco (prod. beni ktt)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/a01FiA3Lfw4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4BGwbNg9mIqKtGLO8EeC0zYFRJQ"
+                            title="MV BILL- Cêélouco (prod. Beni Ktt)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="8AZv0V5E7GI"
+                        class="video-box"
+                        data-search="mv bill- incursão policial (prod. dj caique)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/8AZv0V5E7GI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6AZPMJTRiP_vmopToMnL25FI-ng"
+                            title="MV BILL- Incursão Policial (prod. dj caique)"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">ROADriguinho</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="wYfOAw-6v58"
+                        class="video-box"
+                        data-search="roadriguinho - ep 01 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/wYfOAw-6v58/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD8bUxlW8JzCQONziGY_CjrJmX4TA"
+                            title="ROADriguinho - Ep 01 (1ª temporada)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="5rWbaNT15-E"
+                        class="video-box"
+                        data-search="roadriguinho - ep 02 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/5rWbaNT15-E/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBRCZqgbil92cS70kchhiKHRBk4ew"
+                            title="ROADriguinho - EP 02 (1ª temporada)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="wrHumiM8g3I"
+                        class="video-box"
+                        data-search="roadriguinho - ep 03 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/wrHumiM8g3I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-ZYWeCp2Fo10X0dCCLW1pV-AoRg"
+                            title="ROADriguinho - Ep 03 (1ª temporada)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="OIILEiLqjyc"
+                        class="video-box"
+                        data-search="roadriguinho - ep 04 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/OIILEiLqjyc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA32_5InaMuMZ0WGame2EihYyZYWg"
+                            title="ROADriguinho - Ep 04 (1ª temporada)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="k00ua4qzJ5o"
+                        class="video-box"
+                        data-search="roadriguinho - ep 05 (1ª temporada) - entre amigos part thiaguinho"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/k00ua4qzJ5o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAjv2fz_w91jSHsmhORdmF9XAw6WA"
+                            title="ROADriguinho - Ep 05 (1ª temporada) - Entre amigos part Thiaguinho"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="rIWnSap4vjs"
+                        class="video-box"
+                        data-search="roadriguinho - ep 06 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/rIWnSap4vjs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDiwUXivEatwM8wvMchItUkzyfwKg"
+                            title="ROADriguinho - Ep 06 (1ª temporada)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="xrP1Ur296Vs"
+                        class="video-box"
+                        data-search="roadriguinho - ep 07 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/xrP1Ur296Vs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA77JP5iEtkPj46ZKA0tS2NeLePFg"
+                            title="ROADriguinho - Ep 07 (1ª temporada)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="6AHePRL8xM4"
+                        class="video-box"
+                        data-search="roadriguinho - ep 08 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/6AHePRL8xM4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJnuDyJgi4c1RSHNb3Yy8MOBHcJw"
+                            title="ROADriguinho - Ep 08 (1ª temporada)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="gpiMWal8guc"
+                        class="video-box"
+                        data-search="roadriguinho - ep 09 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/gpiMWal8guc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAsF9NpaeowD06yv62jtPgQGCO-6Q"
+                            title="ROADriguinho - Ep 09 (1ª temporada)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="70Cq_MP5WJU"
+                        class="video-box"
+                        data-search="roadriguinho - ep 10 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/70Cq_MP5WJU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDjzoFfRorsy5pCoW_69tW0_oqKMw"
+                            title="ROADriguinho - Ep 10 (1ª temporada)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="gtUR7SIay6s"
+                        class="video-box"
+                        data-search="roadriguinho - ep 11 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/gtUR7SIay6s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBvungYvlVb2nySKl3sS11k5hqG9g"
+                            title="ROADriguinho - Ep 11 (1ª temporada)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="paiUThK0iog"
+                        class="video-box"
+                        data-search="roadriguinho - ep 12 (1ª temporada)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/paiUThK0iog/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAN-a_sqZS7eoWTpYmQ46l7JSqvIg"
+                            title="ROADriguinho - Ep 12 (1ª temporada)"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Eventos</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="tp22F-pjEuA"
+                        class="video-box"
+                        data-search="primeiro show da bula - são paulo/sp - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/tp22F-pjEuA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtZbC7lo1HSLRHvV2gfmqWSIMrFw"
+                            title="Primeiro show da BULA - São Paulo/SP - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ZHbUaLYHzbg"
+                        class="video-box"
+                        data-search="sesc - exposição de marina abramovic no brasil"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ZHbUaLYHzbg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnTHHeux0xynfLa2IDlU-Yv32Qig"
+                            title="SESC - Exposição de Marina Abramovic no Brasil"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="t8J1SGifiYA"
+                        class="video-box"
+                        data-search="casamento - joão paulo e manú"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/t8J1SGifiYA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBS4V8kRkYr55hcqT-Uf-6K8LlvYA"
+                            title="Casamento - João Paulo e Manú"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Arroz Kids/Teen</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="G-3uvIjh0dk"
+                        class="video-box"
+                        data-search="especial alice emerick 1 ano - retrospectiva"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/G-3uvIjh0dk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEAH105kvZh__hRLvT8mRif-ZfaQ"
+                            title="Especial Alice Emerick 1 ano - Retrospectiva"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="amuBw-3Pabs"
+                        class="video-box"
+                        data-search="renascer teen (sede) - o que acontece no culto das 19h?"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/amuBw-3Pabs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBc2H0mtOsCxh_--_-HC_f-IQI9cw"
+                            title="Renascer Teen (Sede) - O que acontece no culto das 19h?"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Edyqc0BgeVQ"
+                        class="video-box"
+                        data-search="aniversário de 1 ano da alice emerick"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Edyqc0BgeVQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDVL0NpaZl9w59kHymfmDQC6sDCLg"
+                            title="Aniversário de 1 Ano da Alice Emerick"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="cbGpkeM0fHM"
+                        class="video-box"
+                        data-search="aniversário - yasmim e nicolas - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/cbGpkeM0fHM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD51oIpxvOhkCtoMRc86plgqOiXSA"
+                            title="Aniversário - Yasmim e Nicolas - 2015"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Show</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="boOvhFZSZzs"
+                        class="video-box"
+                        data-search="racionais mc's em salvador/ba - mini doc"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/boOvhFZSZzs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-kDJfgddzNjsEcYcAB-VVSDLkPw"
+                            title="Racionais MC's em Salvador/BA - Mini Doc"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="DtTBq-KGmJ4"
+                        class="video-box"
+                        data-search="show bula em são josé dos campos/sp - highlights - 2016"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/DtTBq-KGmJ4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCiqkC2GYmJb52BqKua95ndflPwvg"
+                            title="Show BULA em São José dos Campos/SP - Highlights - 2016"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="1T-P_3OdknI"
+                        class="video-box"
+                        data-search="tati zaqui - show avenue club - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/1T-P_3OdknI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBoropDia4MI1azwe9srGngfVVODw"
+                            title="Tati Zaqui - Show Avenue Club - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="tp22F-pjEuA"
+                        class="video-box"
+                        data-search="primeiro show da bula - são paulo/sp - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/tp22F-pjEuA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtZbC7lo1HSLRHvV2gfmqWSIMrFw"
+                            title="Primeiro show da BULA - São Paulo/SP - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="iUrKyiclcd8"
+                        class="video-box"
+                        data-search="emicida - show avenue club - são paulo/sp"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/iUrKyiclcd8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC4oEg-rPxwN52i6U5oZvJDm5ZpJw"
+                            title="Emicida - Show Avenue Club - São Paulo/SP"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="_hxAh7Z02ZE"
+                        class="video-box"
+                        data-search="henrique e juliano - pra que juízo (ao vivo em roraima)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/_hxAh7Z02ZE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLApYJzbTjAhgG_JvJRCf0g-CO6wYA"
+                            title="Henrique e Juliano - Pra Que Juízo (ao vivo em Roraima)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="D7t8i5WNhFg"
+                        class="video-box"
+                        data-search="show - dois africanos em salvador/ba - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/D7t8i5WNhFg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfpUEtDdj9aJKxbK8zEv3sTSbjPA"
+                            title="Show - Dois Africanos em Salvador/BA - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Ojx5wCYWhhY"
+                        class="video-box"
+                        data-search="mv bill em são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Ojx5wCYWhhY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBBsel4BRiLqDiDLmO5YsVWkPO5lQ"
+                            title="MV Bill em São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="_nd9NOOyG6Y"
+                        class="video-box"
+                        data-search="perdoar - hugo pena e gabriel (oficial clipe)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/_nd9NOOyG6Y/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDikz8Xxhj2yRfoH7T0YJx1f10zA"
+                            title="Perdoar - Hugo Pena e Gabriel (Oficial Clipe)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="cSbPZRc7KpA"
+                        class="video-box"
+                        data-search="mc delano - show avenue club - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/cSbPZRc7KpA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAd0xkKoeAPjepEx-qdDiMdz-2VVQ"
+                            title="Mc Delano - Show Avenue Club - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="iSq03edgLsM"
+                        class="video-box"
+                        data-search="menor da vg - show avenue club - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/iSq03edgLsM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAs6YtQmqdoMy2uYYhIEY4C5FUblA"
+                            title="Menor da VG - Show Avenue Club - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="eVRENx2sxNA"
+                        class="video-box"
+                        data-search="show avenue club - mc livinho - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/eVRENx2sxNA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDD_0uoxFp1GH94S5vtSJyAcXmaZQ"
+                            title="Show Avenue Club - MC Livinho - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="w8Vfl6CLMfQ"
+                        class="video-box"
+                        data-search="projota - show avenue club - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/w8Vfl6CLMfQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmpDbWI2LhrWQttxg42ed_-u5o5A"
+                            title="PROJOTA - Show Avenue Club - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ot0oz4FOvkU"
+                        class="video-box"
+                        data-search="dj soldera - show avenue club - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ot0oz4FOvkU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAaifHXKrL998hz5NQaWw3zRoTYGQ"
+                            title="DJ SOLDERA - Show Avenue Club - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="cX3IANaFims"
+                        class="video-box"
+                        data-search="mc kapela - baile da avenue - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/cX3IANaFims/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBtEk6EmbL0e5WsLEtH0dWe0iNbLQ"
+                            title="MC Kapela - Baile da Avenue - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Qsri_MYBW9Y"
+                        class="video-box"
+                        data-search="mc davi - baile da avenue - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Qsri_MYBW9Y/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCx-95wYwk-Tyac8RLhwSe9JuktIA"
+                            title="MC Davi - Baile da Avenue - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="IGVl4qPf5KE"
+                        class="video-box"
+                        data-search="show avenue club - haikaiss - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/IGVl4qPf5KE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDa-GKh2nl1-yYypE08ibcbIwzFrQ"
+                            title="Show Avenue Club - HAIKAISS - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="an3gD3zhyEY"
+                        class="video-box"
+                        data-search="pikeno e menor - show avenue club - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/an3gD3zhyEY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbinzozPmQLl7DOY9wKsMZQs_krw"
+                            title="Pikeno e Menor - Show Avenue Club - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="esrunGkfugw"
+                        class="video-box"
+                        data-search="mc joão - baile de favela - show avenue club - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/esrunGkfugw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB7qWcv82QL_wIk9aH-XSXPAN-bMg"
+                            title="MC João - BAILE DE FAVELA - Show Avenue Club - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="T5-05q816mA"
+                        class="video-box"
+                        data-search="melanina carioca - show avenue club - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/T5-05q816mA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8x0svjdjiPXjmVIV9AkoMrDzfdA"
+                            title="Melanina Carioca - Show Avenue Club - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="sOeFg1WVhjM"
+                        class="video-box"
+                        data-search="show avenue club - rael da rima - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/sOeFg1WVhjM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAx-U6LEZ7wzVD2NLCmAFJErgcreg"
+                            title="Show Avenue Club - Rael Da Rima - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="MWRr2RUGNuk"
+                        class="video-box"
+                        data-search="mc 2k - show avenue club - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/MWRr2RUGNuk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwhJ1NzQwskyvDwZ3BAfONcgouUA"
+                            title="MC 2K - Show Avenue Club - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="eEesBjJQMOM"
+                        class="video-box"
+                        data-search="mc rodolfinho - show avenue club - são paulo - 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/eEesBjJQMOM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBlAiY2d8rJ5EA9-r-S1xGsS8ITaA"
+                            title="MC Rodolfinho - Show Avenue Club - São Paulo - 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="MDnwH-OtyP0"
+                        class="video-box"
+                        data-search="mv bill no circo voador - lançamento "contemporâneo" (ao vivo)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/MDnwH-OtyP0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAhtbY9Q5ujBijqNwIk7MTrakqzhw"
+                            title="MV Bill no Circo Voador - Lançamento "Contemporâneo" (ao vivo)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="KNNGNSUfLJc"
+                        class="video-box"
+                        data-search="show do rael na feira preta 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/KNNGNSUfLJc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBzxemrbFDf-qiPtcX2RLJ41MWdTg"
+                            title="Show do Rael na Feira Preta 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="HhlizDqYxMo"
+                        class="video-box"
+                        data-search="show do serial funkers na feira preta 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/HhlizDqYxMo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_bXgNiTDQ49RtnzzeMYDYcpLF9A"
+                            title="Show do Serial Funkers na Feira Preta 2015"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Gravação em estúdio</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="1B4O_Q9JCH0"
+                        class="video-box"
+                        data-search="tiago simas ao vivo no estúdio showlivre 2021 - álbum completo"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/1B4O_Q9JCH0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDASKzJC3cZnop7xYM2HuWOWS9nQA"
+                            title="Tiago Simas Ao Vivo no Estúdio Showlivre 2021 - Álbum Completo"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="0mmKM2qsOT4"
+                        class="video-box"
+                        data-search="elder motta e robson araujo - poder da oração"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/0mmKM2qsOT4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBhnOg5RIisu_iAYif1F41hU4SxOw"
+                            title="Elder Motta e Robson Araujo - Poder da Oração"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="pU9ppN-JIes"
+                        class="video-box"
+                        data-search="oseas silva - jesus tú és o meu tudo (ensaio)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/pU9ppN-JIes/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuncVj3CkRLlSwQQ5z80y_VB-uWQ"
+                            title="Oseas Silva - Jesus tú és o meu tudo (Ensaio)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ajykpeVvD54"
+                        class="video-box"
+                        data-search="elder motta - restaura os meus sonhos (acústico)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ajykpeVvD54/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9qWxa3b3VeoWBp12SAPE_AGIwYg"
+                            title="Elder Motta - Restaura os meus sonhos (acústico)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="7f84zynMWvo"
+                        class="video-box"
+                        data-search="luciano e gabriel no boteco - histórias, cachaça e canções (ao vivo)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/7f84zynMWvo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7Qx1aACYpG_ntsXx-gjk6CkzeGg"
+                            title="Luciano e Gabriel no Boteco - Histórias, cachaça e canções (Ao vivo)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Hrdoqjxmu2c"
+                        class="video-box"
+                        data-search="descansar - bia lima - experimentando"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Hrdoqjxmu2c/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD8L_atmbdp13zR8dxSR_cTjGe4zg"
+                            title="Descansar - Bia Lima - Experimentando"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="RxcYRvNFUoQ"
+                        class="video-box"
+                        data-search="silas giron - a onda e a ponte (live studio session)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/RxcYRvNFUoQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDyex5r7K0ZbT-GiAC-7KtMaUF07g"
+                            title="Silas Giron - A Onda e A Ponte (Live Studio Session)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="eu0igOioXs8"
+                        class="video-box"
+                        data-search="silas giron - waiting in vain (live studio session)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/eu0igOioXs8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAtx-R1dOGGOE0_PlA7FBPRPhVB9A"
+                            title="Silas Giron - Waiting in Vain (Live Studio Session)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="-vGffsrCANU"
+                        class="video-box"
+                        data-search="silas giron - batalha (live studio session)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/-vGffsrCANU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYnZCD9Q8DZUBjxt1YbslykrFmGA"
+                            title="Silas Giron - Batalha (Live Studio Session)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="d8XKCYOB37I"
+                        class="video-box"
+                        data-search="sonoplastia - suspense"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/d8XKCYOB37I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAtuIuNREGIbv6WmIy1rCn3AuPEFw"
+                            title="SONOPLASTIA - SUSPENSE"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Teaser</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="eKhDOD0NMPU"
+                        class="video-box"
+                        data-search="bárbara amorim - #elevive - teaser"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/eKhDOD0NMPU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCVCmQMntLSvxZBaO-iMXxXV_2Ayg"
+                            title="Bárbara Amorim - #ELEVIVE - Teaser"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Dye9_jW38aw"
+                        class="video-box"
+                        data-search="rafinha de laia - teaser - um outro lado"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Dye9_jW38aw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBvqBUAY9LGUvVx4924snJfO0cLNg"
+                            title="Rafinha de Laia - Teaser - Um Outro Lado"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="oXJJ2Ahv6KY"
+                        class="video-box"
+                        data-search="jé trindade - twerk brazil"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/oXJJ2Ahv6KY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7F4YM7-34MGkc6fRjDKwTWPxBjA"
+                            title="Jé Trindade - Twerk Brazil"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="93OW_KHYkcE"
+                        class="video-box"
+                        data-search="oseas silva - teaser - ensaio"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/93OW_KHYkcE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAkdEDVk2OP39TX8NE8HIZpxxMPlg"
+                            title="Oseas Silva - Teaser - Ensaio"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="wltDU_aRNUw"
+                        class="video-box"
+                        data-search="clovis pinho - pré-produção do álbum carta viva (2014)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/wltDU_aRNUw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBz2T-_JM89OSzKNC03oLLDzdmj7g"
+                            title="Clovis Pinho - Pré-produção do álbum Carta Viva (2014)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="MLs1n-TOk28"
+                        class="video-box"
+                        data-search="rodrigo luzap - teaser clipe "nas alturas""
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/MLs1n-TOk28/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAAgivGeb0VJtwkv8RVRJ2OqTKufQ"
+                            title="Rodrigo Luzap - Teaser Clipe "Nas Alturas""
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="quPBf4gDq5g"
+                        class="video-box"
+                        data-search="ebert bispo - teaser clipe "filhos""
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/quPBf4gDq5g/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDu10rOQUeuJ5P11Cfn9GXDoABU7Q"
+                            title="Ebert Bispo - Teaser Clipe "Filhos""
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="HR5QvN1v-os"
+                        class="video-box"
+                        data-search="lucas lucco - making of - estúdio classic"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/HR5QvN1v-os/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDMmwjhVg0necCtr8qIIsrxivNnGQ"
+                            title="Lucas Lucco - Making Of - Estúdio Classic"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="2_8xMI03Ycg"
+                        class="video-box"
+                        data-search="ministério 1som - teaser - ensaio"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/2_8xMI03Ycg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxqD4X-0P1LB3E5Jw-kvJ_xzSp8Q"
+                            title="Ministério 1SOM - Teaser - Ensaio"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="2U8B7EntUtg"
+                        class="video-box"
+                        data-search="madrugada do samba 30"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/2U8B7EntUtg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCd3RyHXACvfzDPtOR3qwSmKoJX6w"
+                            title="Madrugada do SAMBA 30"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="_xDpG5YSHeg"
+                        class="video-box"
+                        data-search="rafinha de laia - teaser - um outro lado vol. 2 - gerando vida"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/_xDpG5YSHeg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByZDU-SXS1eEgs8idqScTUOlYsyg"
+                            title="Rafinha de Laia - Teaser - Um Outro Lado Vol. 2 - Gerando Vida"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="wr4ikq1MC8Y"
+                        class="video-box"
+                        data-search="teaser - making of da produção wtw"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/wr4ikq1MC8Y/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDIJASdAKEAc8_wF9C8PI2TVpZFdQ"
+                            title="Teaser - Making Of da produção WTW"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Nm1xpk9vH48"
+                        class="video-box"
+                        data-search="teaser - jean michell drum e ebert bispo - natal"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Nm1xpk9vH48/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAIuriKZXZqffMo3JDnlEI6Ulz-rQ"
+                            title="Teaser - Jean Michell Drum e Ebert Bispo - Natal"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="91X1bT-XnPA"
+                        class="video-box"
+                        data-search="téo e edu - teaser - classic estúdio - neto schaefer"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/91X1bT-XnPA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCU2SXFnP9PoLdyX-isQbUmzetYIQ"
+                            title="Téo e Edu - Teaser - Classic Estúdio - Neto Schaefer"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="fKZOYEKC41I"
+                        class="video-box"
+                        data-search="bula rock - pocket show | school of rock (aim) - teaser"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/fKZOYEKC41I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpZdN5EsrDBes4F_1_SFDySu_Flg"
+                            title="Bula Rock - Pocket Show | School Of Rock (AIM) - Teaser"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="_OI5ZuMvfq0"
+                        class="video-box"
+                        data-search="teaser - jean michel | drum cam"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/_OI5ZuMvfq0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4AQQOETnUUjAvSP64RclVzjdoKw"
+                            title="Teaser - Jean Michel | Drum Cam"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="rG84MqND4FY"
+                        class="video-box"
+                        data-search="ensaio silas giron - 2016"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/rG84MqND4FY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAEbOpLFA9IYiTTOZUEyX6IwSkI_A"
+                            title="Ensaio Silas Giron - 2016"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="vk4isMQOzMI"
+                        class="video-box"
+                        data-search="mv bill - teaser "eu e minha mina""
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/vk4isMQOzMI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClhYJgZgASnvAYJjWWVnxlPChTNA"
+                            title="MV BILL - TEASER "EU E MINHA MINA""
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="cBQKl7U0it8"
+                        class="video-box"
+                        data-search="criativamente - trace tv (teaser)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/cBQKl7U0it8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCymHZEfpwaz_rveCPYG8FHprc1JA"
+                            title="CRIATIVAMENTE - TRACE TV (Teaser)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="epLn5DbiGj4"
+                        class="video-box"
+                        data-search="filme acaso - trailer"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/epLn5DbiGj4/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGUoZTAP&rs=AOn4CLBPzwjONFWMmlVdQNw8awfSj28dBA"
+                            title="Filme ACASO - Trailer"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Música Instrumental</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="qbzFfzwJiPY"
+                        class="video-box"
+                        data-search="rafinha de laia - um outro lado session (vol.1)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/qbzFfzwJiPY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDybReljRSTrzx9TgTKJm1ezAcFw"
+                            title="Rafinha de Laia - Um Outro Lado Session (Vol.1)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="G32C1sIKaSQ"
+                        class="video-box"
+                        data-search="jean michell drum - waiting for the end (drum cover)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/G32C1sIKaSQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAUf6GsgkrGO7fzsAlIWDJ1lsCGyw"
+                            title="Jean Michell Drum - Waiting for the End (Drum Cover)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Io6WlSOyaGs"
+                        class="video-box"
+                        data-search="jean michell drum e ebert bispo - natal"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Io6WlSOyaGs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-IC1DQlamK7sfS6V26mj2oikpvA"
+                            title="Jean Michell Drum e Ebert Bispo - Natal"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="my1owRc8fpc"
+                        class="video-box"
+                        data-search="jean michell drum - drum cam - renascer praise - canto de sião"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/my1owRc8fpc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbvwTcM34XJlXZ8MRTYvK-Y2nlzA"
+                            title="Jean Michell Drum - Drum Cam - Renascer Praise - Canto de Sião"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="deeXGPvmvWM"
+                        class="video-box"
+                        data-search="ti trio - epidemia feat. josué lopez e erik escobar"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/deeXGPvmvWM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBE1vw6-Jca7F_kdT0P9VGZhon6mA"
+                            title="Ti Trio - Epidemia Feat. Josué Lopez e Erik Escobar"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Yfz8Yuio6H8"
+                        class="video-box"
+                        data-search="ti trio - quântico feat. joabe reis"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Yfz8Yuio6H8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBsAuOKa48FCkjDyk00HxEGGGuWOQ"
+                            title="Ti Trio - Quântico feat. Joabe Reis"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="IBxlxsPH9Ik"
+                        class="video-box"
+                        data-search="ti trio - toda uma pureza"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/IBxlxsPH9Ik/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCRkS1onqOhbWgD9H9jaEJmHCPKCg"
+                            title="Ti Trio - Toda uma pureza"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Making Of</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Nj5nRw8NRI0"
+                        class="video-box"
+                        data-search="rodriguinho em família (making of)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Nj5nRw8NRI0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB4u0xldxi45Jdxe07U3LsdpY5cSw"
+                            title="Rodriguinho em Família (Making Of)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="XLazOamzgN4"
+                        class="video-box"
+                        data-search="making of - 22 anos da campanha de conscientização sobre o câncer de mama"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/XLazOamzgN4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJd_QaNydRwtqTKw6ZTUN-dZnj6Q"
+                            title="Making of - 22 anos da Campanha de Conscientização sobre o Câncer de Mama"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="JClZ9nJTA_k"
+                        class="video-box"
+                        data-search="mônica guedes - bastidores show em são paulo"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/JClZ9nJTA_k/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCXplYeA1zXbrVLbKVHsdcZZumrPA"
+                            title="Mônica Guedes - Bastidores Show em São Paulo"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="4EgOjlVacmE"
+                        class="video-box"
+                        data-search="mônica guedes - ensaio de dança"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/4EgOjlVacmE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC65p3Zf6DeprxFUaLp6RlMpPJYYQ"
+                            title="Mônica Guedes - Ensaio de Dança"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="huipTFPx-IA"
+                        class="video-box"
+                        data-search="mônica guedes - ensaio com a banda"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/huipTFPx-IA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDd5R4neCfYAFJM4OPc70WudQaSw"
+                            title="Mônica Guedes - Ensaio com a Banda"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="aEkzFBrk8Jc"
+                        class="video-box"
+                        data-search="irmãos gonçalves - ensaio fotográfico (making of)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/aEkzFBrk8Jc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAGqiuBZP3Rx1dNb3wk0qb_fQGc4w"
+                            title="Irmãos Gonçalves - Ensaio Fotográfico (Making Of)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="VjneeTP5Hmw"
+                        class="video-box"
+                        data-search="banda dopa ao vivo no ginásio do ibirapuera/sp - 2014"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/VjneeTP5Hmw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBPy2Uu1U5yc87VZnfs7pL4n4Vc9Q"
+                            title="Banda DOPA ao vivo no Ginásio do Ibirapuera/SP - 2014"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="WDY5FZoJwK8"
+                        class="video-box"
+                        data-search="banda dopa - evangelismo de carnaval 2014"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/WDY5FZoJwK8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDx-N4jV4REzgURG7G7LoBVfQspJA"
+                            title="Banda DOPA - Evangelismo de Carnaval 2014"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="8LOoB3AkDE0"
+                        class="video-box"
+                        data-search="banda dopa - 1 dia 3 shows 1 propósito (turnê 2014)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/8LOoB3AkDE0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCYWrxhDA90mHc8nRjupnoj2LJj6A"
+                            title="Banda DOPA - 1 dia 3 shows 1 propósito (Turnê 2014)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="TrnYmaakqg4"
+                        class="video-box"
+                        data-search="banda dopa - músicas inéditas para o novo cd (ensaio)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/TrnYmaakqg4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD46uQCasimcE6lUycQUCYeF9YEMg"
+                            title="Banda DOPA - Músicas inéditas para o novo CD (Ensaio)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="rpc4ZQ5jsoA"
+                        class="video-box"
+                        data-search="banda dopa em minas gerais (turnê 2014)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/rpc4ZQ5jsoA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCyCO_56MEmfnomabkn6TtTtbSdGA"
+                            title="Banda DOPA em Minas Gerais (Turnê 2014)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="hAdH77ipvW8"
+                        class="video-box"
+                        data-search="making of - sindiclube e cbc"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/hAdH77ipvW8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAetpNqfqz-zhZaeS1Gzd0IOk-5xA"
+                            title="Making Of - Sindiclube e CBC"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="2KR-I57-i78"
+                        class="video-box"
+                        data-search="making of - ensaio banda baque (dvd 2015)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/2KR-I57-i78/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDVYdn4wV4maqcuuJBiG3K0cIIyVw"
+                            title="Making of - Ensaio Banda Baque (DVD 2015)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="_Ta8W1wjV04"
+                        class="video-box"
+                        data-search="banda baque - ensaio fotográfico (making of)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/_Ta8W1wjV04/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA2IoVBTRZ-8S3v3z0TsjduZY0_9Q"
+                            title="Banda Baque - Ensaio Fotográfico (Making Of)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="rHfGa0oqOD8"
+                        class="video-box"
+                        data-search="making of - lybethras swim"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/rHfGa0oqOD8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDx5qwFmq9rvhMh-rwqpncitfvGYg"
+                            title="Making of - Lybethras Swim"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="nptkSn6Y0-s"
+                        class="video-box"
+                        data-search="luciano e grabirel - making of do videoclipe "cê tem sofrido""
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/nptkSn6Y0-s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPaWVPNkHRYoWgKtCI0_-HKndKdw"
+                            title="Luciano e Grabirel - Making Of do videoclipe "CÊ TEM SOFRIDO""
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="JBUoXDa3lr8"
+                        class="video-box"
+                        data-search="luciano e gabriel - pré-produção da música "cê tem sofrido""
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/JBUoXDa3lr8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDzTa1NQ2fKW0frwtaoOioZtY2-PQ"
+                            title="Luciano e Gabriel - Pré-produção da música "CÊ TEM SOFRIDO""
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="XHxcGhzfhws"
+                        class="video-box"
+                        data-search="making of - festival feira preta em cachoeira/ba"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/XHxcGhzfhws/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBYdE-dmRaRNHxpNvCevUB8-wOWGA"
+                            title="MAKING OF - Festival Feira Preta em Cachoeira/BA"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Clipes</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="lseLDHVCEqE"
+                        class="video-box"
+                        data-search="mv bill - eu e minha mina (prod. insane tracks)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/lseLDHVCEqE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDF7cDx1vBXFBwFgys0GK113DGyOw"
+                            title="MV BILL - Eu e minha Mina (Prod. Insane Tracks)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="qNxH806VmgQ"
+                        class="video-box"
+                        data-search="clovis - + amor por favor (videoclipe)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/qNxH806VmgQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7IK19LDL6goDODFR-qDOYiGdKbg"
+                            title="Clovis - + Amor por Favor (Videoclipe)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="8OFqKS1jjsQ"
+                        class="video-box"
+                        data-search="clovis - todos somos um (sony music live) (videoclipe)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/8OFqKS1jjsQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDx54gbiZIiD1UVUhLXn4nOHkhzcA"
+                            title="Clovis - Todos Somos um (Sony Music Live) (Videoclipe)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="KnQnlVY4M8o"
+                        class="video-box"
+                        data-search="mv bill- cêélouco - prod. beni ktt (lyrics official)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/KnQnlVY4M8o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEgRIXCksHX2v6AuBUqniTDpCtjA"
+                            title="MV BILL- Cêélouco - prod. Beni Ktt (Lyrics Official)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="StcZOu-geRE"
+                        class="video-box"
+                        data-search="tiago simas - pega visão"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/StcZOu-geRE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAggd_Zr0oReBNIF7ypfkhXCnlqvA"
+                            title="Tiago Simas - Pega Visão"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="NjDPWqI5oXk"
+                        class="video-box"
+                        data-search="tiago simas, jean michell, union crew (coreografia) - sempre de boa"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/NjDPWqI5oXk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQ3vuHmOTiuBVjF5zcHfxYjGAR5g"
+                            title="Tiago Simas, Jean Michell, Union Crew (Coreografia) - Sempre de Boa"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="t_itwWRffzc"
+                        class="video-box"
+                        data-search="tiago simas - não quero ninguém (clipe oficial) | pagotrap"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/t_itwWRffzc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDkIIDSEmQ9BMHXAi4EYQW8rPPf9w"
+                            title="TIAGO SIMAS - NÃO QUERO NINGUÉM (CLIPE OFICIAL) | PAGOTRAP"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="SoLiP4YCDEA"
+                        class="video-box"
+                        data-search="contraparte - cada linha (ramon kaizen, yan cloud & ramires ax) - 4k"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/SoLiP4YCDEA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCgko1fMWuFcVe9-oT4BRGqMr3UdA"
+                            title="ContraParte - Cada Linha (Ramon Kaizen, Yan Cloud & Ramires Ax) - 4K"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="TC7yqq-hugE"
+                        class="video-box"
+                        data-search="real tegê - reflexo - prod. insanetracks (webclipe) - 4k - rap nacional"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/TC7yqq-hugE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA0eR0Vk7UyowLJWy1vrZOEOulNxQ"
+                            title="REAL TEGÊ - REFLEXO - prod. InsaneTracks (Webclipe) - 4K - Rap Nacional"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="9uHrjNuTJ10"
+                        class="video-box"
+                        data-search="clovis pinho - ensaio - vivalegria (música nova)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/9uHrjNuTJ10/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2uDc-o3QA7R7whOdB0frY2JJ7qA"
+                            title="Clovis Pinho - Ensaio - VivAlegria (Música Nova)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="2uVAMuFFuCY"
+                        class="video-box"
+                        data-search="mv bill part. dexter - campo minado - by insanetracks (lyrics vídeo oficial)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/2uVAMuFFuCY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEGELQEgPfXTO70pDM7DRTjagZhw"
+                            title="MV Bill Part. Dexter - CAMPO MINADO - by InsaneTracks (Lyrics vídeo Oficial)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="tFgrhaS3aFk"
+                        class="video-box"
+                        data-search="banda dopa - sou da paz (lyric video) 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/tFgrhaS3aFk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-Feils0g6P3uJP58uuRJbikUHOA"
+                            title="Banda DOPA - Sou da Paz (Lyric Video) 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="0mmKM2qsOT4"
+                        class="video-box"
+                        data-search="elder motta e robson araujo - poder da oração"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/0mmKM2qsOT4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBhnOg5RIisu_iAYif1F41hU4SxOw"
+                            title="Elder Motta e Robson Araujo - Poder da Oração"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ajykpeVvD54"
+                        class="video-box"
+                        data-search="elder motta - restaura os meus sonhos (acústico)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ajykpeVvD54/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9qWxa3b3VeoWBp12SAPE_AGIwYg"
+                            title="Elder Motta - Restaura os meus sonhos (acústico)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Bl_9M-mhCrw"
+                        class="video-box"
+                        data-search="yan cloud - show de horrores (webclipe)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Bl_9M-mhCrw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCayQfdfabI4V-bk6rNAadS2L9rsQ"
+                            title="Yan Cloud - Show de Horrores (Webclipe)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="yTE8KTgmGss"
+                        class="video-box"
+                        data-search="rodrigo luzap - amigo de deus"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/yTE8KTgmGss/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBdAvRB7Fgn1XeLddctHfD1kwzfWw"
+                            title="Rodrigo Luzap - Amigo de Deus"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="vdT4m5z7z-A"
+                        class="video-box"
+                        data-search="marcio attack versos - hip hop jazz"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/vdT4m5z7z-A/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsxfGgE9oR_fHXsU7mzJrCmw-_VQ"
+                            title="Marcio Attack Versos - Hip Hop Jazz"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="xoL6HMGoARs"
+                        class="video-box"
+                        data-search="vídeo dança - cia tribo de dança - sou da paz"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/xoL6HMGoARs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMMg7-5_MQ-uffo0OEqDK2rMagqA"
+                            title="Vídeo Dança - Cia Tribo de Dança - Sou da Paz"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="QVIFdt0KHK4"
+                        class="video-box"
+                        data-search="cascadura - retribuição"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/QVIFdt0KHK4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBeZkR6ebArKUX4ebZJmShBmRnYzw"
+                            title="Cascadura - Retribuição"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="hg_6_OomqnQ"
+                        class="video-box"
+                        data-search="mc dentinho - se orar cai tudo"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/hg_6_OomqnQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQYEUcX-ERhlwJ4jW1bUXDeqqM4w"
+                            title="MC Dentinho - Se orar cai tudo"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="8u7S3UIAGFg"
+                        class="video-box"
+                        data-search="rodrigo luzap - nas alturas"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/8u7S3UIAGFg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBvGnsBdIroLp2lT2tp-1saizPz2w"
+                            title="Rodrigo Luzap - Nas Alturas"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="JK8sw_FM_Vc"
+                        class="video-box"
+                        data-search="ebert bispo - filhos"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/JK8sw_FM_Vc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBWrSK3tU9tR33pVIFu0z_0bfMdLQ"
+                            title="Ebert Bispo - Filhos"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="2e9i050jQJg"
+                        class="video-box"
+                        data-search="cilpe da música "filhos" do cd "ebert bispo" de ebert bispo."
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/2e9i050jQJg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZ45sK7E76ed_RMCeCHDMzyMl8Wg"
+                            title="Cilpe da música "Filhos" do CD "Ebert Bispo" de Ebert Bispo."
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="NNlqpAoUo54"
+                        class="video-box"
+                        data-search="silas giron - living for the city (live studio session)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/NNlqpAoUo54/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCHyOcngqxEY5xk-mUU2DYguAhmfQ"
+                            title="Silas Giron - Living for the city (Live Studio Session)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="HUKx7Ce2OLI"
+                        class="video-box"
+                        data-search="real tegê - licença pra chegar - prod. insanetracks (webclipe)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/HUKx7Ce2OLI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC5E1oZbg0u9qkCWxCzGHgoOQUHWQ"
+                            title="REAL TEGÊ - Licença pra Chegar - prod. InsaneTracks (Webclipe)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="bQyG12yTmMU"
+                        class="video-box"
+                        data-search="selakuatro - movimento do trava (webclipe) 2017"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/bQyG12yTmMU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAXCDYqa-qGrqbZIPO3AfgHQ374Yg"
+                            title="Selakuatro - Movimento do Trava (Webclipe) 2017"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="dNv_fDr4XCU"
+                        class="video-box"
+                        data-search="eu olho pra jesus | ebert bispo | eb music"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/dNv_fDr4XCU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDhqIyQluVrLQ4M7HGVV1CUK2q9Cg"
+                            title="Eu olho pra Jesus | Ebert Bispo | EB Music"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ANRSp3kdFnQ"
+                        class="video-box"
+                        data-search="antioquia - subversivo part. jhow (webclipe)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ANRSp3kdFnQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmx0lr-mqqbLxpe4OwH3HWIFiLFA"
+                            title="ANTIOQUIA - Subversivo part. Jhow (Webclipe)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="z5a0M0_cnLU"
+                        class="video-box"
+                        data-search="jhow - alfa e ômega (webclipe)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/z5a0M0_cnLU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBi-DqqUpjQf9TH-7EGtOv4BpNsxg"
+                            title="JHOW - ALFA E ÔMEGA (Webclipe)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="YA089lmwWFs"
+                        class="video-box"
+                        data-search="diamante negro - ei preta (webclipe)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/YA089lmwWFs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyAOBcaxR_ukaZ2Q950DWyXdI36A"
+                            title="Diamante Negro - Ei preta (Webclipe)"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">MMA</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ttT31tzx3H8"
+                        class="video-box"
+                        data-search="entrevista com vitor belfort"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ttT31tzx3H8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAAz3FLMs_16Dr6OXpoZtZ6BvHH3Q"
+                            title="Entrevista com Vitor Belfort"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="7taOeTNA04M"
+                        class="video-box"
+                        data-search="treinamento anderson silva"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/7taOeTNA04M/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3sUoElPrJNTW8VdO1V1pVZt86BA"
+                            title="Treinamento Anderson Silva"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="07RJP6FtXJo"
+                        class="video-box"
+                        data-search="minotauro - team nogueira"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/07RJP6FtXJo/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhhIGEoYTAP&rs=AOn4CLDjCAAivkcGWOVtUXkoJmajQ785eQ"
+                            title="Minotauro - Team Nogueira"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="h3dIpaN3qI4"
+                        class="video-box"
+                        data-search="entervista com josé aldo jr"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/h3dIpaN3qI4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBWvjPryX-Gd1p5BXxvTL4UV07TgA"
+                            title="Entervista com José Aldo Jr"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="CZoGLWM-XmI"
+                        class="video-box"
+                        data-search="treinamento rousimar toquinho com sergio cunha"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/CZoGLWM-XmI/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIFkoVTAP&rs=AOn4CLAGZIZ_5PcBuELtT-iZFIG5SfwUhg"
+                            title="Treinamento Rousimar Toquinho com Sergio Cunha"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="2MsDCN3OS84"
+                        class="video-box"
+                        data-search="#cobertura alfenas balada fight"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/2MsDCN3OS84/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZbaWErouvAwSPpiLFhKKRxTbO3A"
+                            title="#Cobertura Alfenas Balada Fight"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Publicidade</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Z8zfgJ-zxtw"
+                        class="video-box"
+                        data-search="oxente gentchy!"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Z8zfgJ-zxtw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDMpCi9ConNPBC70scqPnlKfiC_eg"
+                            title="Oxente Gentchy!"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="FIZvqubqAc4"
+                        class="video-box"
+                        data-search="cea - centro de estudo apostólico"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/FIZvqubqAc4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAii6nTI9Y8oYqeHlJ7wxYsymC8nA"
+                            title="CEA - Centro de Estudo Apostólico"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Zs5ka6iN5ac"
+                        class="video-box"
+                        data-search="comercial tv - nerds do brasil"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Zs5ka6iN5ac/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBzgWAAuADigIMCAAQARhlIGUoZTAP&rs=AOn4CLBzvTQhCCC8WyrhghpoW2zIUAXdWQ"
+                            title="COMERCIAL TV - NERDS DO BRASIL"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="HRC8UUQoD1s"
+                        class="video-box"
+                        data-search="epe teen - matrículas abertas!"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/HRC8UUQoD1s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzj-I4zN_f53tkvQGpjCQ52pe70g"
+                            title="EPE Teen - Matrículas abertas!"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Jk3xbsQXbJY"
+                        class="video-box"
+                        data-search="social gold - segunda edição (2014)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Jk3xbsQXbJY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_ZeduKmXWL2f0O6RaAB4AyPRTiA"
+                            title="Social Gold - Segunda Edição (2014)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="gnlyC7SOQxc"
+                        class="video-box"
+                        data-search="bem aventuranças"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/gnlyC7SOQxc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC6SeiL_o0xvqjIuMACpi25XVyPzg"
+                            title="Bem Aventuranças"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ilXPmfdPpSM"
+                        class="video-box"
+                        data-search="zumba no brasil com rafael santanna"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ilXPmfdPpSM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmgQpju8Xvf_WHv1eN7phYU2Cqow"
+                            title="Zumba no Brasil com Rafael Santanna"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Da28pqy0ku8"
+                        class="video-box"
+                        data-search="encontro de jovens #jbfontes!"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Da28pqy0ku8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBxymYH13kWr_I0HsjgjvV6oREylw"
+                            title="Encontro de Jovens #JBfontes!"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="_KWxXS9E_sE"
+                        class="video-box"
+                        data-search="escola de música souza lima - recital gospel"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/_KWxXS9E_sE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_pcecP46AC7_hyA_HuHU43w1sxg"
+                            title="Escola de Música Souza Lima - Recital Gospel"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="m3woyttbo00"
+                        class="video-box"
+                        data-search="o que é a madrugada do samba?"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/m3woyttbo00/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCldkXRAXKEgrzsMdatpSodjNYsHw"
+                            title="O que é a Madrugada do Samba?"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="nMD-SDVyshM"
+                        class="video-box"
+                        data-search="você conhece a esporte lins?"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/nMD-SDVyshM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-bsJ-EbNZAwp0EM-voWJ9oYFPHA"
+                            title="Você conhece a Esporte Lins?"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="hAt6kGBDCt4"
+                        class="video-box"
+                        data-search="wtw - hospital santa catarina"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/hAt6kGBDCt4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzizwSD3VqXOyboSJR2S3g7eyj4Q"
+                            title="WTW - Hospital Santa Catarina"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="_dXf1tXG6Bk"
+                        class="video-box"
+                        data-search="wtw - conotel 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/_dXf1tXG6Bk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVtGbiGuQQYeaOgrCCZ9ZBPiPyJg"
+                            title="WTW - Conotel 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="S1kAhm3zVEg"
+                        class="video-box"
+                        data-search="ciosp 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/S1kAhm3zVEg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDZPuWu5vL5UP4KUQN5ODw5lYBFg"
+                            title="CIOSP 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="8NTt_WJQ4H8"
+                        class="video-box"
+                        data-search="ciab 2015"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/8NTt_WJQ4H8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkqXuttbgozhnY_t071HxMstortw"
+                            title="CIAB 2015"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="vHi8NvakiPc"
+                        class="video-box"
+                        data-search="wtw - sindclube"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/vHi8NvakiPc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDAfd4N492vrj-R7Rki3Gi70z8m4Q"
+                            title="WTW - SINDCLUBE"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="sRHiCKZi9bQ"
+                        class="video-box"
+                        data-search="walk this way (wtw) - quer vender mais? - vitrine digital"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/sRHiCKZi9bQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAyAWiD9i7jxcDZ_mtR0fAFAYp4GQ"
+                            title="Walk This Way (WTW) - Quer vender mais? - Vitrine Digital"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="g1FbihNxUtQ"
+                        class="video-box"
+                        data-search="comercial - mc delano"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/g1FbihNxUtQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACAoahyRHw6MJQtcqBHAa11NLW1A"
+                            title="Comercial - Mc Delano"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="0pTwkaPD4IU"
+                        class="video-box"
+                        data-search="comercial - mc livinho"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/0pTwkaPD4IU/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARh_IC8oNjAP&rs=AOn4CLCQgnNwTQqDfg92LoHn_gKgGBLtJQ"
+                            title="Comercial - Mc Livinho"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="U8lZC2mMPP8"
+                        class="video-box"
+                        data-search="comercial - mr. catra"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/U8lZC2mMPP8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUbjU3j-28LCRSYXih1hvGlBUwvg"
+                            title="Comercial - Mr. Catra"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="nYWOnaS47qA"
+                        class="video-box"
+                        data-search="comercial - projota"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/nYWOnaS47qA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDaqoxugpV2_p7D9E5_rHyqRqhCQA"
+                            title="Comercial - PROJOTA"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="cl3iZQlzaIk"
+                        class="video-box"
+                        data-search="comercial - mc livinho"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/cl3iZQlzaIk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBl1mjzSpHv-O5V_3XRuKcAi8KU9w"
+                            title="Comercial - Mc Livinho"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="p9zmnRg-4z8"
+                        class="video-box"
+                        data-search="comercial - jeito moleque"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/p9zmnRg-4z8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAIuONQEpslq2dCa0wSyilhX0ylmA"
+                            title="Comercial - Jeito Moleque"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ql31PapHsos"
+                        class="video-box"
+                        data-search="comercial - mc brinquedo"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ql31PapHsos/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZo-E3QATWDf9pZFM8RyrLdP87gQ"
+                            title="Comercial - MC BRINQUEDO"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="xgflS_-0joQ"
+                        class="video-box"
+                        data-search="comercial - start rap"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/xgflS_-0joQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC89iCGvPB1fN5mh6gi5-wHOdLIrQ"
+                            title="Comercial - Start RAP"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="Mfo2Na-DkXQ"
+                        class="video-box"
+                        data-search="comercial - mc menor da vg"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/Mfo2Na-DkXQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCl6SaArUkNCj_3GE6Nfn6GqX5yHQ"
+                            title="Comercial - MC Menor da VG"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="_46zYivAw1c"
+                        class="video-box"
+                        data-search="comercial - show mc tati zaqui"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/_46zYivAw1c/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfZNRMCc_JKiYRrcpI_ZMdmjGZWw"
+                            title="Comercial - Show Mc Tati Zaqui"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="sLfirGDigY4"
+                        class="video-box"
+                        data-search="comercial - show filipe ret"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/sLfirGDigY4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDV1asBN7UUqUgp74-69suPVsvCRw"
+                            title="Comercial - Show Filipe Ret"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="ORu2WzcWc6I"
+                        class="video-box"
+                        data-search="comercial - mcs pikeno e menor"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/ORu2WzcWc6I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDHGzoXI_3O1hR5JhupYzV3xAZ_VA"
+                            title="Comercial - MCs PIKENO E MENOR"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="8hmTV3hfLYw"
+                        class="video-box"
+                        data-search="comercial rael na avenue club"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/8hmTV3hfLYw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCiIeZW1MeoSYK3glleTRLCPhM1Dg"
+                            title="Comercial RAEL na Avenue Club"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="2_8v4idKcUk"
+                        class="video-box"
+                        data-search="dicas nerds do brasil"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/2_8v4idKcUk/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhOIGUoXTAP&rs=AOn4CLC7hcPyA8YMcOt-d80BUiX_crHXpQ"
+                            title="Dicas Nerds do Brasil"
+                        >
+                    </div>
+                </div>
+            </section><section class="playlist">
+                <h2 class="playlist__title">Televisão</h2>
+                <div class="playlist__videos">
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="lebwR0CXUFc"
+                        class="video-box"
+                        data-search="#clst - camisa jeans"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/lebwR0CXUFc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSLMczDR1K9FKqZ3SG9G__mA6AXA"
+                            title="#CLST - Camisa Jeans"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="LEM6KmXEXsI"
+                        class="video-box"
+                        data-search="#ong orelhões"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/LEM6KmXEXsI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQGaktRQ-SHMHuzC7C7Fq4dUTyGg"
+                            title="#ONG Orelhões"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="foX8q-sE8Cg"
+                        class="video-box"
+                        data-search="#doc 23° feira de curta metragem"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/foX8q-sE8Cg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAVp6wnhtjWa7ktuCrEW62jOXkjcg"
+                            title="#DOC 23° Feira de Curta Metragem"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="YFRNWFdzt-w"
+                        class="video-box"
+                        data-search="#vip expo cristã"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/YFRNWFdzt-w/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACdmG7eDRKIoOmy03bsCDgHqTRGw"
+                            title="#VIP Expo Cristã"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="fZev97EDY8E"
+                        class="video-box"
+                        data-search="#doc brasil game show"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/fZev97EDY8E/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBtXK63f2zo16DoRTrPu--aS505mg"
+                            title="#DOC Brasil Game Show"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="C2vviuaG51k"
+                        class="video-box"
+                        data-search="wtw channel - touchscreen no mundo do cinema?"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/C2vviuaG51k/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7L-XmsPeCH_odEx1_R0J5t6KLIg"
+                            title="WTW Channel - Touchscreen no mundo do cinema?"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="SzEu4-JT1OI"
+                        class="video-box"
+                        data-search="stop motion - alãn"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/SzEu4-JT1OI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBsm6mB9NocXEuCZ6DoPeppQ8he6A"
+                            title="Stop Motion - ALÃN"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="EwcE-YYQi1s"
+                        class="video-box"
+                        data-search="fmu - curso de administração - creche esperança (2016)"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/EwcE-YYQi1s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAAomuqYkOppcmwiSDxozwxC8hk4A"
+                            title="FMU - Curso de Administração - Creche Esperança (2016)"
+                        >
+                    </div>
+                
+                    <div
+                        onclick="SIMAS.chooseVideo(this)"
+                        data-video-id="wTW2bO0ON3M"
+                        class="video-box"
+                        data-search="quem te colocou nessa vida? | mini doc"
+                        >
+                        <img 
+                            class="video-box__image"
+                            src="https://i.ytimg.com/vi/wTW2bO0ON3M/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC31OeX7Iwx_LxFCGcjwL_AGl6tBg"
+                            title="Quem te colocou nessa vida? | Mini Doc"
+                        >
+                    </div>
+                </div>
+            </section></main>
+</body>
