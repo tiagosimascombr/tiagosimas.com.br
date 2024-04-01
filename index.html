@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiago Simas | Site Oficial </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body class="page-body">    
+<main class="page-main">
+    <script type="application/javascript">
+        window.SIMAS = window.SIMAS || {};
+
+        window.SIMAS.openImage = function(src) {
+            const modal = document.querySelector("[data-modal]");
+            const modalImage = modal.querySelector("[data-modal-image]");
+            document.querySelector("body").style.overflow = "hidden";
+            modal.dataset.isOpen = "true";
+            modalImage.setAttribute("src", src);
+        };
+
+        window.SIMAS.closeModal = function() {
+            const modal = document.querySelector("[data-modal]");
+            document.querySelector("body").style.overflow = "initial";
+            modal.dataset.isOpen = "false";
+        }
+    </script>
+
+    <section class="page-section--large">
+        <div class="page-section__content--column">
+            <img src="/images/tiago-simas-logo.png" width="355" height="199" class="logo-image">
+            <ul class="social-links" data-hide-after-separator="true">
+    
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://www.deezer.com/br/artist/8869796">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M451.46,244.71H576V172H451.46Zm0-173.89v72.67H576V70.82Zm0,275.06H576V273.2H451.46ZM0,447.09H124.54V374.42H0Zm150.47,0H275V374.42H150.47Zm150.52,0H425.53V374.42H301Zm150.47,0H576V374.42H451.46ZM301,345.88H425.53V273.2H301Zm-150.52,0H275V273.2H150.47Zm0-101.17H275V172H150.47Z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://open.spotify.com/artist/4PGp0IWXZEfUbIdmHBaEBZ">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+<path fill="currentColor" d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://www.instagram.com/simastiago/">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+<path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://www.youtube.com/@tiagosimasvideos">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://www.facebook.com/tiagosimasoficial">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://twitter.com/simastiago">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        
+            <li class="social-links__separator"></li><li class="social-links__item">
+            <a class="social-links__anchor" href="https://wa.link/2pb2er">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+<path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="mailto:tiagosimasmusica@gmail.com">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M176 216h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16zm-16 80c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16zm96 121.13c-16.42 0-32.84-5.06-46.86-15.19L0 250.86V464c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V250.86L302.86 401.94c-14.02 10.12-30.44 15.19-46.86 15.19zm237.61-254.18c-8.85-6.94-17.24-13.47-29.61-22.81V96c0-26.51-21.49-48-48-48h-77.55c-3.04-2.2-5.87-4.26-9.04-6.56C312.6 29.17 279.2-.35 256 0c-23.2-.35-56.59 29.17-73.41 41.44-3.17 2.3-6 4.36-9.04 6.56H96c-26.51 0-48 21.49-48 48v44.14c-12.37 9.33-20.76 15.87-29.61 22.81A47.995 47.995 0 0 0 0 200.72v10.65l96 69.35V96h320v184.72l96-69.35v-10.65c0-14.74-6.78-28.67-18.39-37.77z"></path>
+</svg>
+            </a>
+        </li><li class="social-links__item--text">
+        CONTATO
+    </li>
+</ul>
+
+<style>
+    .social-links {
+        margin-left: auto;
+        margin-top: auto;
+        list-style: none;
+        display: flex;
+        margin-right: auto;
+        padding: 0;
+    }
+    @media(min-width: 768px) {
+        .social-links {
+            width: 100%;
+            margin-left: initial;
+        }
+    }
+    .social-links__separator {
+        margin-left: auto;
+    }
+    .social-links__item,
+    .social-links__item--text {
+        margin-right: 8px;
+    }
+    .social-links__item--text {
+        display: none;
+        color: #fff;
+        font-size: 32px;
+        font-family: "Bebas Neue", sans-serif;
+    }
+    @media(min-width: 768px) {
+        .social-links__item--text {
+            display: initial;
+        }
+    }
+    .social-links__anchor {
+        color: #fff;
+    }
+
+    [data-hide-after-separator=true] .social-links__separator ~ .social-links__item,
+    [data-hide-after-separator=true] .social-links__separator ~ .social-links__item--text {
+        display: none;
+    }
+
+</style>
+
+        </div>
+    </section>
+    <section class="page-section">
+        <h2 class="page-section__title">Sobre</h2>
+        <div class="page-section__content">
+            <div class="card">
+                <img class="card__image" src="/images/tiago-simas-fundo-amarelo.png" loading="lazy" width="824" height="816">
+                <div class="card__description"><p><p>Reafirmando sua versatilidade e inovação musical, Tiago Simas lança o projeto “Plantando a Paz, Colhendo Reggae”. A produção conta com 7 canções no total. A música carro-chefe é a &quot;Viajar&quot;, que reforça a identidade do artista que mistura o reggae com vertentes do pop. A temática do álbum é o amor, poesia e paz, destaque para as faixas &quot;Saudade&quot;, &quot;Você Não Vale a Pena&quot;, do compositor Pablo Dominguez, “O Hippie”, de Rafael Pondé, artista bastante conhecido pela autoria de diversas canções gravadas pela banda Natiruts e Diamba, &quot;Kaya na Gandaia&quot;, &quot;Na Paz de Jah” e “Vida Inteira”, que abrilhantam ainda mais o trabalho.</p>
+</p><p><h1>Quem é Tiago Simas</h1>
+</p><p><p>É jornalista, cineasta, cantor e compositor, nascido no bairro da Liberdade em Salvador/Bahia, onde a negritude é a maior referência e a manifestação artística é a principal forma de expressão. Com uma carreira sólida de mais de 10 anos, apresenta atualmente um projeto que envolve diversas canções autorais e fusão rítmica do reggae com a música eletrônica, rock, hip hop, trap, reggae entre outros estilos.</p>
+</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section">
+        <h2 class="page-section__title">Ouça</h2>
+        <div class="page-section__content">
+            <iframe
+                class="playlist"
+                src="https://open.spotify.com/embed/artist/4PGp0IWXZEfUbIdmHBaEBZ"
+                width="300"
+                height="180"
+                frameborder="0"
+                allowtransparency="true"
+                allow="encrypted-media"
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+    <section class="page-section">
+        <h2 class="page-section__title">Vídeos</h2>
+        <div class="page-section__content">
+            <ul class="videos-list"><li class="videos-list__item">
+                    <a href="https://www.youtube.com/v/t_itwWRffzc" class="videos-list__link" target="_blank">
+                        <img src="https://tiagosimas.com.br/images/nao-quero-ninguem.jpg" class="videos-list__thumb" loading="lazy">
+                    </a>
+                </li><li class="videos-list__item">
+                    <a href="https://www.youtube.com/v/zoePzYBk8RY" class="videos-list__link" target="_blank">
+                        <img src="https://tiagosimas.com.br/images/forever.jpg" class="videos-list__thumb" loading="lazy">
+                    </a>
+                </li><li class="videos-list__item">
+                    <a href="https://www.youtube.com/v/1Z_ZaRy8_nU" class="videos-list__link" target="_blank">
+                        <img src="https://tiagosimas.com.br/images/aquele-vontade.jpg" class="videos-list__thumb" loading="lazy">
+                    </a>
+                </li><li class="videos-list__item">
+                    <a href="https://www.youtube.com/v/rBEAUx_XhvM" class="videos-list__link" target="_blank">
+                        <img src="https://tiagosimas.com.br/images/agonia.jpg" class="videos-list__thumb" loading="lazy">
+                    </a>
+                </li><li class="videos-list__item">
+                    <a href="https://www.youtube.com/v/NjDPWqI5oXk" class="videos-list__link" target="_blank">
+                        <img src="https://tiagosimas.com.br/images/sempre-na-boa.png" class="videos-list__thumb" loading="lazy">
+                    </a>
+                </li><li class="videos-list__item">
+                    <a href="https://www.youtube.com/v/StcZOu-geRE" class="videos-list__link" target="_blank">
+                        <img src="https://tiagosimas.com.br/images/pega-visao.jpg" class="videos-list__thumb" loading="lazy">
+                    </a>
+                </li><li class="videos-list__item">
+                    <a href="https://www.youtube.com/v/plKa49HI7Y4" class="videos-list__link" target="_blank">
+                        <img src="https://tiagosimas.com.br/images/vai-no-tempo.jpg" class="videos-list__thumb" loading="lazy">
+                    </a>
+                </li><li class="videos-list--see-more">
+                    <a href="https://www.youtube.com/@tiagosimasvideos" class="videos-list__thumb" target="_blank"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="page-section--small">
+        <div class="page-section__content--column">
+            <ul class="social-links" data-hide-after-separator="false">
+    
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://www.deezer.com/br/artist/8869796">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M451.46,244.71H576V172H451.46Zm0-173.89v72.67H576V70.82Zm0,275.06H576V273.2H451.46ZM0,447.09H124.54V374.42H0Zm150.47,0H275V374.42H150.47Zm150.52,0H425.53V374.42H301Zm150.47,0H576V374.42H451.46ZM301,345.88H425.53V273.2H301Zm-150.52,0H275V273.2H150.47Zm0-101.17H275V172H150.47Z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://open.spotify.com/artist/4PGp0IWXZEfUbIdmHBaEBZ">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+<path fill="currentColor" d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://www.instagram.com/simastiago/">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+<path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://www.youtube.com/@tiagosimasvideos">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://www.facebook.com/tiagosimasoficial">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="https://twitter.com/simastiago">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        
+            <li class="social-links__separator"></li><li class="social-links__item">
+            <a class="social-links__anchor" href="https://wa.link/2pb2er">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+<path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+</svg>
+            </a>
+        </li>
+        
+        
+        <li class="social-links__item">
+            <a class="social-links__anchor" href="mailto:tiagosimasmusica@gmail.com">
+                <svg style="font-size:1em;width:32px;color:#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M176 216h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16zm-16 80c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16zm96 121.13c-16.42 0-32.84-5.06-46.86-15.19L0 250.86V464c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V250.86L302.86 401.94c-14.02 10.12-30.44 15.19-46.86 15.19zm237.61-254.18c-8.85-6.94-17.24-13.47-29.61-22.81V96c0-26.51-21.49-48-48-48h-77.55c-3.04-2.2-5.87-4.26-9.04-6.56C312.6 29.17 279.2-.35 256 0c-23.2-.35-56.59 29.17-73.41 41.44-3.17 2.3-6 4.36-9.04 6.56H96c-26.51 0-48 21.49-48 48v44.14c-12.37 9.33-20.76 15.87-29.61 22.81A47.995 47.995 0 0 0 0 200.72v10.65l96 69.35V96h320v184.72l96-69.35v-10.65c0-14.74-6.78-28.67-18.39-37.77z"></path>
+</svg>
+            </a>
+        </li><li class="social-links__item--text">
+        CONTATO
+    </li>
+</ul>
+
+<style>
+    .social-links {
+        margin-left: auto;
+        margin-top: auto;
+        list-style: none;
+        display: flex;
+        margin-right: auto;
+        padding: 0;
+    }
+    @media(min-width: 768px) {
+        .social-links {
+            width: 100%;
+            margin-left: initial;
+        }
+    }
+    .social-links__separator {
+        margin-left: auto;
+    }
+    .social-links__item,
+    .social-links__item--text {
+        margin-right: 8px;
+    }
+    .social-links__item--text {
+        display: none;
+        color: #fff;
+        font-size: 32px;
+        font-family: "Bebas Neue", sans-serif;
+    }
+    @media(min-width: 768px) {
+        .social-links__item--text {
+            display: initial;
+        }
+    }
+    .social-links__anchor {
+        color: #fff;
+    }
+
+    [data-hide-after-separator=true] .social-links__separator ~ .social-links__item,
+    [data-hide-after-separator=true] .social-links__separator ~ .social-links__item--text {
+        display: none;
+    }
+
+</style>
+
+        </div>
+    </section>
+    <div class="modal" data-modal>
+        <div class="modal__content">
+            <button class="modal__close-button" onclick="SIMAS.closeModal()">&times;</button>
+            <section class="modal__content__section">
+                <img class="modal__content__image" data-modal-image>
+            </section>
+        </div>
+    </div>
+    <style>
+        .page-section,
+        .page-section--small,
+        .page-section--large {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .page-section--small {
+            min-height: 80px;
+        }
+
+        .page-section--large {
+            min-height: calc(100vh - 60px);
+        }
+
+        .logo-image {
+            margin-bottom: auto;
+            font-size: 3em;
+            color: #fff;
+            margin-right: auto;
+            font-family: "Bebas Neue", sans-serif;
+            margin-left: auto;
+            margin-top: 50px;
+            letter-spacing: .05em;
+        }
+
+        @media(min-width: 768px) {
+            .logo-image {
+                margin-left: initial;
+                font-size: 5em;
+            }
+        }
+
+        .page-section *,
+        .page-section--small *,
+        .page-section--large * {
+            z-index: 1;
+        }
+
+        .page-section__title {
+            padding: 16px;
+            font-family: "Bebas Neue", sans-serif;
+            width: 100%;
+            background: rgba(0, 0, 0, .5);
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 4em;
+        }
+
+        .page-section__content,
+        .page-section__content--column {
+            max-width: 960px;
+            margin: 0 auto;
+            height: 100%;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .page-section__content--column {
+            flex-direction: column;
+        }
+
+        .card {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+
+        @media(min-width: 768px) {
+            .card {
+                flex-direction: row;
+            }
+        }
+
+        .card__image {
+            width: 100%;
+            height: auto;
+        }
+
+        @media(min-width: 768px) {
+            .card__image {
+                width: 30%;
+                min-width: 250px;
+                height: 50%;
+                margin-bottom: auto;
+            }
+        }
+
+        .card__description {
+            line-height: 1.5;
+            color: #fff;
+            padding: 0 32px 32px 32px;
+            font-size: 1.4em;
+            text-shadow: 0 0 5px #000;
+        }
+
+        .card__description p:empty {
+            display: none;
+        }
+
+        .card__description p {
+            margin-top: 0;
+        }
+
+        .card__description a {
+            color: inherit;
+        }
+
+        .card__description__title {
+            margin: 0;
+        }
+
+        @media(min-width: 768px) {
+            .card__description {
+                font-size: 1.2em;
+            }
+        }
+
+        .videos-list,
+        .videos-list--see-more {
+            list-style: none;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 24px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .videos-list--see-more {
+            background-color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.2em;
+            min-height: 290px;
+        }
+
+        @media(min-width: 768px) {
+            .videos-list--see-more {
+                min-height: initial;
+            }
+        }
+
+        .videos-list--see-more:after {
+            content: "Veja mais vídeos";
+            color: #fff;
+            position: absolute;
+        }
+
+        @media(min-width: 768px) {
+            .videos-list {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-gap: 8px;
+                padding: 0;
+            }
+        }
+
+        .videos-list__item {
+            max-width: 100%;
+        }
+
+        .videos-list__link {
+            display: block;
+            max-width: 100%;
+            transition: all ease-in-out .2s;
+            height: 100%;
+        }
+
+        .videos-list__link:hover {
+            filter: brightness(.8);
+        }
+
+        .videos-list__thumb {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            width: 100%;
+        }
+
+        .contact-list {
+            padding: 0;
+            margin: auto;
+            flex-direction: column;
+            width: 100%;
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            text-align: center;
+            color: #fff;
+        }
+        @media(min-width: 768px) {
+            .contact-list {
+                flex-direction: row;
+            }
+        }
+
+        .contact-list__item {
+            padding: 24px;
+            width: 100%;
+        }
+
+        .contact-list__title {
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.4em;
+        }
+
+        .contact-list__icon {
+            margin: 0;
+            color: #fff;
+        }
+
+        .playlist {
+            width: 100%;
+            margin: 24px;
+        }
+
+        @media(min-width: 768px) {
+            .playlist {
+                margin: 0;
+            }
+        }
+        /**
+        Fotos
+         */
+        .photos-list {
+            display: flex;
+            list-style: none;
+            max-width: 100%;
+            padding: 10px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+
+        @media(min-width: 768px) {
+            .photos-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, auto));
+                grid-gap: 10px;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+        }
+
+        .photos-list__item {
+            max-width: 320px;
+            object-fit: initial;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .5), 0 0 40px rgba(0, 0, 0, .8) inset;
+            min-width: 320px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        @media(min-width: 768px) {
+            .photos-list__item {
+                min-width: initial;
+                margin-right: 0;
+            }
+        }
+
+        .photos-list__thumb {
+            max-width: 100%;
+            object-fit: cover;
+            background: #e6e6e6;
+            height: 100%;
+            display: block;
+        }
+        /*
+        MODAL
+         */
+        .modal {
+            display: none;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: 2;
+            top: 0;
+            bottom: 0;
+            justify-content: center;
+            align-content: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, .8);
+        }
+
+        .modal[data-is-open='true'] {
+            display: flex;
+        }
+
+        .modal__content {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            max-width: 100%;
+            height: 100%;
+        }
+
+        .modal__content__section {
+            padding: 10px;
+            max-width: 100%;
+            margin-bottom: auto;
+            margin-top: auto;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .5), 0 0 40px rgba(0, 0, 0, .8) inset;
+        }
+
+        .modal__close-button {
+            margin-left: auto;
+            margin-right: 10px;
+            margin-top: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .modal__content__image {
+            max-width: 100%;
+            max-height: calc(100vh - 100px);
+        }
+
+    </style>
+    <footer class="page-footer">
+        <div class="page-footer__content">
+            Todos os direitos reservados 2022 © Tiago Simas
+        </div>
+    </footer>
+</main>
+</body>
+<style>
+    html {
+        box-sizing: border-box;
+        font-size: 1em;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    .page-body {
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+        font-family: sans-serif;
+        background-size: cover;
+        background-attachment: fixed;   
+        background-image: url(/images/tiago-fundo-sem-seta.png);
+        background-position: center center;
+    }
+
+    .page-video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    body:after {
+        position: fixed;
+        width: 100%;
+        content: "";
+        background: rgba(0, 0, 0, .5);
+        height: 100%;
+        top: 0;
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, .5) 25%, transparent 25%), linear-gradient(-45deg, rgba(0, 0, 0, .5) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, .5) 75%), linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, .5) 75%);
+        -moz-background-size: 2px 2px;
+        background-size: 4px 4px;
+        background-position: 0 0, 2px 0, 2px -2px, 0 2px;
+        opacity: 1;
+    }
+
+    .page-footer {
+        padding: 32px;
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        font-weight: 400;
+        z-index: 1;
+        position: relative;
+        text-align: center;
+    }
+
+    @media(min-width: 768px) {
+        .page-footer {
+            padding: 32px 0;
+            text-align: initial;
+        }
+    }
+
+    .page-footer__content {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+</style>
+</html>
